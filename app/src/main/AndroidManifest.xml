@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EParte">
         <activity
+            android:name=".MenuActivity"
+            android:exported="false"
+            android:label="Menu"/>
+        <activity
+            android:name=".CodeActivity"
+            android:exported="false"
+            android:label="Code"/>
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:label="Register"/>
+        <activity
             android:name=".Home"
             android:exported="true"
             android:label="Home">

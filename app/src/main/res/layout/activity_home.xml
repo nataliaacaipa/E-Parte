@@ -59,7 +59,8 @@
         android:layout_marginStart="158dp"
         android:text="@string/logInButtonText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+        android:onClick="onClick"/>
 
     <Button
         android:id="@+id/button2"
@@ -69,7 +70,8 @@
         android:layout_marginTop="20dp"
         android:text="@string/registerButtonHomeText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        android:onClick="onClick"/>
 
     <Button
         android:id="@+id/button3"
@@ -79,5 +81,6 @@
         android:layout_marginTop="20dp"
         android:text="@string/guestButtonHomeText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        android:onClick="onClick"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
