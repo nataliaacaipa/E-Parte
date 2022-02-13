@@ -17,8 +17,10 @@ public class Home extends AppCompatActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
-                intent = new Intent(this,MenuActivity.class);
-                startActivity(intent);
+                if(checkUser()){
+                    intent = new Intent(this, MenuActivity.class);
+                    startActivity(intent);
+                }
                 break;
 
             case R.id.button2:
@@ -29,5 +31,9 @@ public class Home extends AppCompatActivity {
                 intent = new Intent(this,CodeActivity.class);
                 startActivity(intent);
         }
+    }
+
+    private Boolean checkUser() {
+        return true;
     }
 }
