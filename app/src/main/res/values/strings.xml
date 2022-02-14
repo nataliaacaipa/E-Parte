@@ -6,5 +6,5 @@
     <string name="passwordHomeHint">*********</string>
     <string name="logInButtonText">Log in</string>
     <string name="registerButtonHomeText">Register</string>
-    <string name="guestButtonHomeText">Enter Code</string>
+    <string name="guestButtonHomeText">Código</string>
 </resources>
