@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class MyOpenHelper extends SQLiteOpenHelper {
     private static final String command1 = "CREATE TABLE  user (_ID integer PRIMARY KEY AUTOINCREMENT, name text, mail text, password text)";
-    private static final String command2 = "CREATE TABLE  vechicle (_ID integer PRIMARY KEY AUTOINCREMENT, licensePlate text, mail text, password text)";
+    private static final String command2 = "CREATE TABLE  vechicle (_ID integer PRIMARY KEY AUTOINCREMENT, userID integer,  licensePlate text, name text, surname text, adress text, postcode integer, iva boolean, model text , country text, policyNumber integer, agency text, gCNumber integer, caducityGC text, damagesInsured boolean, driverLicenseNumber integer, category text, issued text, validUntil text)";
     private SQLiteDatabase db;
     public MyOpenHelper(Context context) {
         super(context, "user.sqlite", null, 1);
