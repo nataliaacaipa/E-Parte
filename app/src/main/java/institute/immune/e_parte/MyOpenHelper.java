@@ -43,8 +43,8 @@ public class MyOpenHelper extends SQLiteOpenHelper {
 
 
     }
-    public ArrayList<Usuario> mostrar(){
-        ArrayList<Usuario> lista = new ArrayList<Usuario>();
+    public ArrayList<User> mostrar(){
+        ArrayList<User> lista = new ArrayList<User>();
         Cursor cursor = db.rawQuery(command2, null);
         if(cursor != null && cursor.getCount()>0) {
             cursor.moveToFirst();
@@ -52,7 +52,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
                 @SuppressLint("Range") String nombre = cursor.getString(cursor.getColumnIndex("name"));
                 @SuppressLint("Range") String correo = cursor.getString(cursor.getColumnIndex("mail"));
                 @SuppressLint("Range") int id = cursor.getInt(cursor.getColumnIndex("_ID"));
-                Usuario user = new Usuario(id ,nombre, correo);
+                User user = new User(id ,nombre, correo);
                 lista.add(user);
             } while (cursor.moveToNext());
         }
