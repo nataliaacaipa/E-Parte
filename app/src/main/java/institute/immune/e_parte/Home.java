@@ -13,6 +13,10 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
     }
 
+    /** Método que recibe el click a cualquier botón y comienza la actividad deseada.
+     *
+     * @param view: botón presionado.
+     */
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()) {
@@ -22,7 +26,6 @@ public class Home extends AppCompatActivity {
                     startActivity(intent);
                 }
                 break;
-
             case R.id.button2:
                 intent = new Intent(this,RegisterActivity.class);
                 startActivity(intent);
@@ -34,6 +37,10 @@ public class Home extends AppCompatActivity {
         }
     }
 
+    /** Método que combrueba si los datos de inicio de sesión dados son correctos y devuelve resultado true o false.
+     *
+     * @return: true o false
+     */
     private Boolean checkUser() {
         return true;
     }
