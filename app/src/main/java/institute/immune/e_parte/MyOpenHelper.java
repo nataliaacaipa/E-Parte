@@ -31,10 +31,11 @@ public class MyOpenHelper extends SQLiteOpenHelper {
 
     }
 
-    public void añadir(String nombre, String correo){
+    public void añadirUser(String nombre, String correo, String contra){
         ContentValues cv = new ContentValues();
         cv.put("name", nombre);
         cv.put("mail", correo);
+        cv.put("password", contra);
         db.insert("user",null, cv );
     }
     public void borrar(int id){
