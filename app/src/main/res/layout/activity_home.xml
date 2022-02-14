@@ -13,11 +13,12 @@
         android:layout_marginStart="172dp"
         android:layout_marginTop="127dp"
         android:text="@string/textoHomeMail"
+        android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/mailHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="97dp"
@@ -37,16 +38,16 @@
         android:layout_marginStart="156dp"
         android:text="@string/textViewPasswordHome"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/mailHome" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/passwordHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="97dp"
         android:ems="10"
         android:hint="@string/passwordHomeHint"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
@@ -59,7 +60,7 @@
         android:layout_marginStart="158dp"
         android:text="@string/logInButtonText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+        app:layout_constraintTop_toBottomOf="@+id/passwordHome"
         android:onClick="onClick"/>
 
     <Button
@@ -83,4 +84,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2"
         android:onClick="onClick"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
