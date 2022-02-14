@@ -4,18 +4,15 @@ public class User {
     int id;
     String name;
     String mail;
+    String password;
 
-    User(int i, String n, String c){
+    User(int i, String n, String c, String k){
         id = i;
         name = n;
         mail = c;
+        password = k;
     }
 
-    @Override
-    public String toString() {
-
-        return name + mail;
-    }
 
     public void setMail(String mail) {
         this.mail = mail;
@@ -39,5 +36,9 @@ public class User {
 
     public String getName() {
         return name;
+    }
+
+    public String getPassword() {
+        return password;
     }
 }

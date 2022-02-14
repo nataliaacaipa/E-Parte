@@ -68,23 +68,25 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         db.delete("user", "_ID=?", args);
     }
     public ArrayList<User> mostrar(){
-        ArrayList<User> lista = new ArrayList<User>();
+        ArrayList<User> list = new ArrayList<User>();
         Cursor cursor = db.rawQuery(commandMostrarUsuarios, null);
         if(cursor != null && cursor.getCount()>0) {
             cursor.moveToFirst();
             do {
-                @SuppressLint("Range") String nombre = cursor.getString(cursor.getColumnIndex("name"));
-                @SuppressLint("Range") String correo = cursor.getString(cursor.getColumnIndex("mail"));
+                @SuppressLint("Range") String name = cursor.getString(cursor.getColumnIndex("name"));
+                @SuppressLint("Range") String mail = cursor.getString(cursor.getColumnIndex("mail"));
                 @SuppressLint("Range") int id = cursor.getInt(cursor.getColumnIndex("_ID"));
-                @SuppressLint("Range") int password = cursor.getInt(cursor.getColumnIndex("password"));
-                User user = new User(id ,nombre, correo);
-                lista.add(user);
+                @SuppressLint("Range") String password = cursor.getString(cursor.getColumnIndex("password"));
+                User user = new User(id ,name, mail, password);
+                list.add(user);
+                System.out.println("\nID: " + id + "\nName: " + name + "/ E-mail: " + mail + "/ Password: " + password + "\n");
             } while (cursor.moveToNext());
         }
         cursor.close();
-        System.out.println(lista);
-        return lista;
+
+        return list;
     }
+
 
 
 
