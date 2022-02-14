@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 
 public class Home extends AppCompatActivity {
-    private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,6 +14,7 @@ public class Home extends AppCompatActivity {
     }
 
     public void onClick(View view) {
+        Intent intent;
         switch (view.getId()) {
             case R.id.button:
                 if(checkUser()){
@@ -30,6 +30,7 @@ public class Home extends AppCompatActivity {
             case R.id.button3:
                 intent = new Intent(this,CodeActivity.class);
                 startActivity(intent);
+                break;
         }
     }
 
