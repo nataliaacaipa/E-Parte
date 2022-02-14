@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">E-Parte</string>
     <string name="textoHomeMail">E-mail:</string>
-    <string name="placeHolderMail">example@gmail.com</string>
-    <string name="textViewPasswordHome">Password:</string>
+    <string name="placeHolderMail">ejemplo@gmail.com</string>
+    <string name="textViewPasswordHome">Contraseña:</string>
     <string name="passwordHomeHint">*********</string>
     <string name="logInButtonText">Log in</string>
-    <string name="registerButtonHomeText">Register</string>
+    <string name="registerButtonHomeText">Regístrate</string>
     <string name="guestButtonHomeText">Enter Code</string>
 </resources>
