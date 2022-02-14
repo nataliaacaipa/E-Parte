@@ -39,9 +39,6 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     public void borrar(int id){
         String[] args = new String[]{String.valueOf(id)};
         db.delete("user", "_ID=?", args);
-
-
-
     }
     public ArrayList<User> mostrar(){
         ArrayList<User> lista = new ArrayList<User>();
@@ -59,6 +56,4 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         cursor.close();
         return lista;
     }
-
-
 }

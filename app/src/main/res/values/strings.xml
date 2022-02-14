@@ -7,4 +7,6 @@
     <string name="logInButtonText">Log in</string>
     <string name="registerButtonHomeText">Regístrate</string>
     <string name="guestButtonHomeText">Enter Code</string>
+    <string name="buttonCodeText">Obtener parte (PDF)</string>
+    <string name="placeHolderCode">Introducir código</string>
 </resources>
