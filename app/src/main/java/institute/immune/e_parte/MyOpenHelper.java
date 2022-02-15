@@ -63,6 +63,10 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         String[] args = new String[]{String.valueOf(id)};
         db.delete("user", "_ID=?", args);
     }
+
+    /** Método que lee la tabla de vehículos de la base de datos y devuelve sus datos.
+     * @return lista: que devuelve todos lso vechiculos
+     */
     public ArrayList<User> showUsers(){
         ArrayList<User> list = new ArrayList<User>();
         Cursor cursor = db.rawQuery(commandMostrarUsuarios, null);
@@ -82,6 +86,9 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         return list;
     }
 
+    /** Método que añade a la base de datos un nuevo vehículo.
+     *
+     */
     public void añadirCoche(String name, String surname, String licensePlate, String address, int postcode, int iva, String model, String country, int policyNumber, String agency, int gcn, String gcc, int damagesInsured, int driverLicenseNumber, String category, String issuedIn, String validUntil, int userID){
         ContentValues cv = new ContentValues();
         cv.put("name", name);
