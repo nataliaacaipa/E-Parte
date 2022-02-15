@@ -10,17 +10,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EParte">
         <activity
+            android:name=".CarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstructionsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MenuActivity"
             android:exported="false"
-            android:label="Menu"/>
+            android:label="Menu" />
         <activity
             android:name=".CodeActivity"
             android:exported="false"
-            android:label="Code"/>
+            android:label="Code" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false"
-            android:label="Register"/>
+            android:label="Register" />
         <activity
             android:name=".Home"
             android:exported="true"
