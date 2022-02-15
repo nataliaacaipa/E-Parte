@@ -11,13 +11,16 @@
         android:theme="@style/Theme.EParte">
         <activity
             android:name=".CarActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Add car"/>
         <activity
             android:name=".ReportActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Report"/>
         <activity
             android:name=".InstructionsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Instructions"/>
         <activity
             android:name=".MenuActivity"
             android:exported="false"
