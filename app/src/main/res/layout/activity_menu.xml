@@ -10,12 +10,14 @@
         android:id="@+id/buttonReport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="264dp"
-        android:text="Report"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="208dp"
+        android:layout_marginEnd="120dp"
+        android:onClick="onClickMenu"
+        android:text="@string/bReportM"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onClickMenu"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonInstructions"
@@ -23,19 +25,23 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="132dp"
         android:layout_marginTop="44dp"
-        android:text="Instructions"
+        android:layout_marginEnd="132dp"
+        android:onClick="onClickMenu"
+        android:text="@string/bInstructionsM"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonReport"
-        android:onClick="onClickMenu"/>
+        app:layout_constraintTop_toBottomOf="@+id/buttonReport" />
 
     <Button
         android:id="@+id/buttonCar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
+        android:layout_marginStart="150dp"
         android:layout_marginTop="40dp"
-        android:text="Add car"
+        android:layout_marginEnd="150dp"
+        android:onClick="onClickMenu"
+        android:text="@string/bAddCarM"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonInstructions"
-        android:onClick="onClickMenu"/>
+        app:layout_constraintTop_toBottomOf="@+id/buttonInstructions" />
 </androidx.constraintlayout.widget.ConstraintLayout>
