@@ -7,28 +7,30 @@ import android.os.Bundle;
 import android.view.View;
 
 public class MenuActivity extends AppCompatActivity {
-
+    private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
     }
 
-    public void onClick(View view) {
-        Intent intent;
+    public void onClickMenu(View view) {
+
         switch (view.getId()) {
             case R.id.buttonReport:
                 intent = new Intent(this, ReportActivity.class);
-                startActivity(intent);
+
                 break;
             case R.id.buttonInstructions:
                 intent = new Intent(this,InstructionsActivity.class);
-                startActivity(intent);
+
                 break;
             case R.id.buttonCar:
                 intent = new Intent(this,CarActivity.class);
-                startActivity(intent);
+
                 break;
         }
+        startActivity(intent);
     }
+
 }

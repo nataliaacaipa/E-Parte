@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class Home extends AppCompatActivity {
+    private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,23 +19,19 @@ public class Home extends AppCompatActivity {
      * @param view: botón presionado.
      */
     public void onClick(View view) {
-        Intent intent;
         switch (view.getId()) {
             case R.id.button:
-                if(checkUser()){
-                    intent = new Intent(this, MenuActivity.class);
-                    startActivity(intent);
-                }
+                intent = new Intent(this, MenuActivity.class);
                 break;
             case R.id.button2:
                 intent = new Intent(this,RegisterActivity.class);
-                startActivity(intent);
                 break;
             case R.id.button3:
                 intent = new Intent(this,CodeActivity.class);
-                startActivity(intent);
                 break;
+            default:
         }
+        startActivity(intent);
     }
 
     /** Método que combrueba si los datos de inicio de sesión dados son correctos y devuelve resultado true o false.
