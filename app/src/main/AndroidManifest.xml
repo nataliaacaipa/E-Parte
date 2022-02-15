@@ -16,11 +16,11 @@
         <activity
             android:name=".ReportActivity"
             android:exported="false"
-            android:label="Report"/>
+            android:label="Parte"/>
         <activity
             android:name=".InstructionsActivity"
             android:exported="false"
-            android:label="Instructions"/>
+            android:label="Instrucciones"/>
         <activity
             android:name=".MenuActivity"
             android:exported="false"

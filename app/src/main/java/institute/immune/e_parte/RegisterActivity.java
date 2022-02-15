@@ -27,4 +27,6 @@ public class RegisterActivity extends AppCompatActivity {
             mail = findViewById(R.id.mailR);
             password = findViewById(R.id.passwordR);
     }
+
+    
 }
