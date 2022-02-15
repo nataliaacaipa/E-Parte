@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".InstructionsActivity">
 
+    <TextView
+        android:id="@+id/textViewInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="9dp"
+        android:text="@string/instructions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="19sp"
+        android:scrollbars = "vertical"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
