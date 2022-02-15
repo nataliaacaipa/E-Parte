@@ -43,16 +43,16 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     }
 
     /**
-     *  @param nombre : Nombre del nuevo usuario.
-     * @param correo : Correo electrónico del nuevo usuario.
-     * @param contra : Contraseña del nuevo usuario (No es contraseña para no usar ñ).
+     *  @param name : Nombre del nuevo usuario.
+     * @param mail : Correo electrónico del nuevo usuario.
+     * @param password : Contraseña del nuevo usuario (No es contraseña para no usar ñ).
      */
-    public void añadirUsuario(String nombre, String correo, String contra){
-        mostrar();
+    public void añadirUsuario(String name, String mail, String password){
+        showUsers();
         ContentValues cv = new ContentValues();
-        cv.put("name", nombre);
-        cv.put("mail", correo);
-        cv.put("password", contra);
+        cv.put("name", name);
+        cv.put("mail", mail);
+        cv.put("password", password);
         db.insert("user",null, cv );
     }
 
@@ -64,7 +64,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         String[] args = new String[]{String.valueOf(id)};
         db.delete("user", "_ID=?", args);
     }
-    public ArrayList<User> mostrar(){
+    public ArrayList<User> showUsers(){
         ArrayList<User> list = new ArrayList<User>();
         Cursor cursor = db.rawQuery(commandMostrarUsuarios, null);
         if(cursor != null && cursor.getCount()>0) {
@@ -80,10 +80,32 @@ public class MyOpenHelper extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
         cursor.close();
-
         return list;
     }
 
+    public void añadirCoche(String name, String surname, String licensePlate, String address, int postcode, int iva, String model, String country, int policyNumber, String agency, int gcn, String gcc, int damagesInsured, int driverLicenseNumber, String category, String issuedIn, String validUntil, int userID){
+        showUsers();
+        ContentValues cv = new ContentValues();
+        cv.put("name", name);
+        cv.put("surname", surname);
+        cv.put("licensePlate", licensePlate);
+        cv.put("address", address);
+        cv.put("postcode", postcode);
+        cv.put("iva", iva);
+        cv.put("model", model);
+        cv.put("country", country);
+        cv.put("policyNumber", policyNumber);
+        cv.put("agency", agency);
+        cv.put("gcn", gcn);
+        cv.put("gcc", gcc);
+        cv.put("damagesInsured", damagesInsured);
+        cv.put("driverLicenseNumber", driverLicenseNumber);
+        cv.put("category", category);
+        cv.put("issuedIn", issuedIn);
+        cv.put("validUntil", validUntil);
+        cv.put("userID", userID);
+        db.insert("user",null, cv );
+    }
 
 
 
