@@ -23,9 +23,9 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void bindings(){
-            name = findViewById(R.id.nameR);
-            mail = findViewById(R.id.mailR);
-            password = findViewById(R.id.passwordR);
+            name = findViewById(R.id.inputNameR);
+            mail = findViewById(R.id.inputMailR);
+            password = findViewById(R.id.inputPasswordR);
     }
 
     

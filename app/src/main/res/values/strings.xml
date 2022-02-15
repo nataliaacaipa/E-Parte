@@ -9,9 +9,11 @@
     <string name="guestButtonHomeText">Descargar parte</string>
     <string name="buttonCodeText">Obtener parte (PDF)</string>
     <string name="placeHolderCode">Introducir código</string>
-    <string name="editTextNameR">Nombre</string>
-    <string name="editTextPasswordR">Contraseña</string>
-    <string name="editTextMailR">Correo</string>
+    <string name="hintNameR">Nombre*</string>
+    <string name="hintPasswordR">Contraseña*</string>
+    <string name="hintCPasswordR">Confirmar contraseña*</string>
+    <string name="hintMailR">Correo*</string>
+
     <string name="buttonRegisterR">registrar</string>
     <string name="instructions">Bloque 1:  los datos básicos del accidente
 El primer paso es dejar claro los datos básicos del siniestro, esto es: fecha, hora, lugar (lo más exacto posible)... También hay que indicar si se han sufrido daños materiales y/o personales, cuántos vehículos se han visto implicados, si se han producido daños en el mobiliario urbano o a terceras personas y, muy importante, si ha habido testigos. Bloque 2: conductor A y conductor B
