@@ -12,7 +12,7 @@
         <activity
             android:name=".CarActivity"
             android:exported="false"
-            android:label="Add car"/>
+            android:label="Añadir nuevo coche"/>
         <activity
             android:name=".ReportActivity"
             android:exported="false"
@@ -24,7 +24,7 @@
         <activity
             android:name=".MenuActivity"
             android:exported="false"
-            android:label="Menu" />
+            android:label="Menú" />
         <activity
             android:name=".CodeActivity"
             android:exported="false"
@@ -36,7 +36,7 @@
         <activity
             android:name=".Home"
             android:exported="true"
-            android:label="Home">
+            android:label="Inicio">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
