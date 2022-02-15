@@ -28,11 +28,11 @@
         <activity
             android:name=".CodeActivity"
             android:exported="false"
-            android:label="Code" />
+            android:label="Código" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false"
-            android:label="Register" />
+            android:label="Registro" />
         <activity
             android:name=".Home"
             android:exported="true"
