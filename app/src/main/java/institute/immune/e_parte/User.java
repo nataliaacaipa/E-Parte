@@ -6,11 +6,11 @@ public class User {
     private String mail;
     private String password;
 
-    User(int i, String n, String m, String p){
-        id = i;
-        name = n;
-        mail = m;
-        password = p;
+    User(int id, String name, String mail, String password){
+        this.id = id;
+        this.name = name;
+        this.mail = mail;
+        this.password = password;
     }
 
 

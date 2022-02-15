@@ -17,7 +17,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
      *  command3 = crea la tabla de partes(report)
      */
     private static final String command1 = "CREATE TABLE  user (_ID integer PRIMARY KEY AUTOINCREMENT, name text, mail text, password text)";
-    private static final String command2 = "CREATE TABLE  vechicle (_ID integer PRIMARY KEY AUTOINCREMENT, userID integer,  licensePlate text, name text, surname text, adress text, postcode integer, iva boolean, model text , country text, policyNumber integer, agency text, gCNumber integer, caducityGC text, damagesInsured boolean, driverLicenseNumber integer, category text, issued text, validUntil text)";
+    private static final String command2 = "CREATE TABLE  vechicle (_ID integer PRIMARY KEY AUTOINCREMENT,  licensePlate text, name text, surname text, adress text, postcode integer, iva boolean, model text , country text, policyNumber integer, agency text, gCNumber integer, caducityGC text, damagesInsured boolean, driverLicenseNumber integer, category text, issued text, validUntil text, userID integer, FOREIGN KEY(userID) REFERENCES user(_ID))";
     private static final String commandMostrarUsuarios = "SELECT _ID, name, mail, password from user";
     private SQLiteDatabase db;
 
@@ -27,10 +27,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     public MyOpenHelper(Context context) {
         super(context, "user.sqlite", null, 1);
         db = this.getWritableDatabase();
-
-
     }
-
     /** Sobrescribimos el método onCreate para reañizar todos los comandos necesarios para nuestra base de datos.
      *
      */
