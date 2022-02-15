@@ -1,16 +1,16 @@
 package institute.immune.e_parte;
 
 public class User {
-    int id;
-    String name;
-    String mail;
-    String password;
+    private int id;
+    private String name;
+    private String mail;
+    private String password;
 
-    User(int i, String n, String c, String k){
+    User(int i, String n, String m, String p){
         id = i;
         name = n;
-        mail = c;
-        password = k;
+        mail = m;
+        password = p;
     }
 
 
