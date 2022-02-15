@@ -25,7 +25,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
      *
      */
     public MyOpenHelper(Context context) {
-        super(context, "user.sqlite", null, 1);
+        super(context, "e-parte.sqlite", null, 1);
         db = this.getWritableDatabase();
     }
     /** Sobrescribimos el método onCreate para reañizar todos los comandos necesarios para nuestra base de datos.
@@ -41,19 +41,18 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
     }
-
     /**
      *  @param name : Nombre del nuevo usuario.
      * @param mail : Correo electrónico del nuevo usuario.
      * @param password : Contraseña del nuevo usuario (No es contraseña para no usar ñ).
      */
     public void añadirUsuario(String name, String mail, String password){
-        showUsers();
         ContentValues cv = new ContentValues();
         cv.put("name", name);
         cv.put("mail", mail);
         cv.put("password", password);
         db.insert("user",null, cv );
+        showUsers();
     }
 
     /** Método que elimina un usuario dado su ID.
@@ -84,7 +83,6 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     }
 
     public void añadirCoche(String name, String surname, String licensePlate, String address, int postcode, int iva, String model, String country, int policyNumber, String agency, int gcn, String gcc, int damagesInsured, int driverLicenseNumber, String category, String issuedIn, String validUntil, int userID){
-        showUsers();
         ContentValues cv = new ContentValues();
         cv.put("name", name);
         cv.put("surname", surname);
@@ -104,9 +102,6 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         cv.put("issuedIn", issuedIn);
         cv.put("validUntil", validUntil);
         cv.put("userID", userID);
-        db.insert("user",null, cv );
+        db.insert("vehicle",null, cv);
     }
-
-
-
 }
