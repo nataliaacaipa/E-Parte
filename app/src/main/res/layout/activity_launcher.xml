@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/e_parte_logo" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/bLauncherL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
