@@ -15,6 +15,7 @@ public class EndActivity extends AppCompatActivity {
     }
 
     public void openMenu(View view) {
+        finish();
         intent = new Intent(this,MenuActivity.class);
         startActivity(intent);
     }
