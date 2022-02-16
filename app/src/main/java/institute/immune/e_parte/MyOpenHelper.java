@@ -43,10 +43,13 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     public boolean checkUser(String mail, String password){
         Cursor cursor = db.rawQuery(commandPasswordbyMail, new String[]{mail});
         cursor.moveToFirst();
-
-        @SuppressLint("Range") String realPassword = cursor.getString(cursor.getColumnIndex("password"));
-        if(password.equals(realPassword)){
-            return true;
+        if(cursor != null && cursor.getCount()>0) {
+            @SuppressLint("Range") String realPassword = cursor.getString(cursor.getColumnIndex("password"));
+            if (password.equals(realPassword)) {
+                return true;
+            } else {
+                return false;
+            }
         }
         else{
             return false;

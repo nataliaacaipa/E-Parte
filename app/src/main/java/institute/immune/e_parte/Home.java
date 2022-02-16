@@ -59,8 +59,7 @@ public class Home extends AppCompatActivity {
      */
     private Boolean checkUser() {
         op = new MyOpenHelper(this);
-        op.checkUser(mail.getText().toString(), password.getText().toString());
-        return true;
+        return op.checkUser(mail.getText().toString(), password.getText().toString());
     }
 
     public void bindings(){
