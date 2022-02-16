@@ -19,7 +19,6 @@ public class MenuActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.buttonReport:
                 intent = new Intent(this, ReportActivity.class);
-
                 break;
             case R.id.buttonInstructions:
                 intent = new Intent(this,InstructionsActivity.class);

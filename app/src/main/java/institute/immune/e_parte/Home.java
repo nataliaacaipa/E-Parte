@@ -3,15 +3,24 @@ package institute.immune.e_parte;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 public class Home extends AppCompatActivity {
     private Intent intent;
+    private EditText mail, password;
+    private MyOpenHelper op;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        bindings();
+
+
+
     }
 
     /** Método que recibe el click a cualquier botón y comienza la actividad deseada.
@@ -21,7 +30,9 @@ public class Home extends AppCompatActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
-                intent = new Intent(this, MenuActivity.class);
+                if(checkUser()) {
+                    intent = new Intent(this, MenuActivity.class);
+                }
                 break;
             case R.id.button2:
                 intent = new Intent(this,RegisterActivity.class);
@@ -39,6 +50,13 @@ public class Home extends AppCompatActivity {
      * @return: true o false
      */
     private Boolean checkUser() {
+        op = new MyOpenHelper(this);
+        op.checkUser(mail.getText().toString(), password.getText().toString());
         return true;
+    }
+
+    public void bindings(){
+        mail = findViewById(R.id.mailHome);
+        password = findViewById(R.id.passwordHome);
     }
 }
