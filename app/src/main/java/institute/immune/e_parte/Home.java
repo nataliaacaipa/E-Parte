@@ -29,15 +29,15 @@ public class Home extends AppCompatActivity {
      */
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.button:
+            case R.id.bLoginH:
                 if(checkUser()) {
                     intent = new Intent(this, MenuActivity.class);
                 }
                 break;
-            case R.id.button2:
+            case R.id.bRegisterH:
                 intent = new Intent(this,RegisterActivity.class);
                 break;
-            case R.id.button3:
+            case R.id.bDownloadH:
                 intent = new Intent(this,CodeActivity.class);
                 break;
             default:
