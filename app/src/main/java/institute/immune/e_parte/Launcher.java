@@ -15,6 +15,7 @@ public class Launcher extends AppCompatActivity {
     }
 
     public void openHome(View view) {
+        finish();
         intent = new Intent(this,Home.class);
         startActivity(intent);
     }
