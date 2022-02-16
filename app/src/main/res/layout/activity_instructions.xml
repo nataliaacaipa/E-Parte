@@ -53,19 +53,32 @@
             app:layout_constraintTop_toBottomOf="@+id/txt1I" />
 
         <TextView
-            android:id="@+id/textView22"
+            android:id="@+id/txt3I"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
             android:text="@string/txt3I"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt2I" />
+
+        <Button
+            android:id="@+id/bBackV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="20dp"
+            android:text="volver a menú"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt3I" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
