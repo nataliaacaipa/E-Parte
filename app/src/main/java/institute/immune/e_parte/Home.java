@@ -44,7 +44,6 @@ public class Home extends AppCompatActivity {
 
                 break;
             case R.id.bRegisterH:
-                finish();
                 intent = new Intent(this,RegisterActivity.class);
                 startActivity(intent);
                 break;
@@ -66,8 +65,14 @@ public class Home extends AppCompatActivity {
      * @return: true o false
      */
     private Boolean checkUser() {
-        op = new MyOpenHelper(this);
-        return op.checkUser(mail.getText().toString(), password.getText().toString());
+        if(!mail.getText().toString().isEmpty()&&!password.getText().toString().isEmpty()){
+            op = new MyOpenHelper(this);
+            return op.checkUser(mail.getText().toString(), password.getText().toString());
+        }
+        else{
+            return false;
+        }
+
     }
 
     public void bindings(){
