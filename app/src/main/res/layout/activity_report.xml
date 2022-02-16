@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ReportActivity"
-    android:background="@color/white">
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
-        android:layout_width="351dp"
-        android:layout_height="700dp"
-        android:layout_marginStart="30sp"
-        android:layout_marginTop="30sp"
-        android:layout_marginEnd="30sp"
-        android:layout_marginBottom="30sp"
-        android:background="@color/white">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".InstructionsActivity">
 
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Permiso válido hasta"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputCodeV" />
 
         <TextView
             android:id="@+id/txtRegisterV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="100dp"
             android:fontFamily="sans-serif-black"
-            android:text="Registra un nuevo vehículo"
+            android:text="Datos vehículo A"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,28 +41,20 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="21dp"
-            android:text="Asegurado(veáse póliza de seguro)"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:text="Conductor"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtRegisterV" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/textView21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Vehículo"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputAdressV" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Aseguradora"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="15dp"
+            android:text="Circunstancias"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/inputModelV" />
@@ -67,7 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="12dp"
             android:text="Nombre"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -77,110 +74,31 @@
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
-            android:text="Marca, modelo"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="15dp"
-            android:text="Nombre"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-        <TextView
-            android:id="@+id/textView17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="10dp"
-            android:text="Agencia"
+            android:text="Nº permiso conducir"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputNameAV" />
-
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="68dp"
-            android:layout_marginTop="15dp"
-            android:text="Nº de póliza"
-            android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/textView14"
-            app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="15dp"
-            android:text="Nº de carta verde"
-            android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/textView15"
-            app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="31dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="60dp"
-            android:text="hasta"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView19"
-            app:layout_constraintTop_toBottomOf="@+id/inputNumGCV" />
-
-        <TextView
-            android:id="@+id/textView19"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="10dp"
-            android:text="CCV válida desde"
-            android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/textView17"
-            app:layout_constraintTop_toBottomOf="@+id/inputNumPV" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="15dp"
-            android:text="País"
-            android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/textView10"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            app:layout_constraintTop_toBottomOf="@+id/inputAdressV" />
 
         <TextView
             android:id="@+id/textView12"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="15dp"
-            android:text="Matrícula"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="152dp"
+            android:text="Categoría(A,B...)"
             android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/textView11"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputCodeV" />
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:text="Dirección"
+            android:layout_marginTop="10dp"
+            android:text="Fecha nacimiento"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/inputNameV" />
@@ -189,8 +107,8 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="100dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="144dp"
             android:text="Apellidos"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -200,9 +118,9 @@
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="72dp"
-            android:text="Código postal"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="148dp"
+            android:text="Dirección"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/inputSurnameV" />
@@ -211,19 +129,20 @@
             android:id="@+id/inputNameV"
             android:layout_width="144dp"
             android:layout_height="48dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="1dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:textAppearance="?android:attr/textAppearanceSmallInverse"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"
 
-            />
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <EditText
             android:id="@+id/inputModelV"
             android:layout_width="109dp"
             android:layout_height="48dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="1dp"
             android:ems="10"
             android:inputType="textPersonName"
@@ -231,97 +150,32 @@
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
         <EditText
-            android:id="@+id/inputNameAV"
-            android:layout_width="109dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="1dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-        <EditText
-            android:id="@+id/inputAgencyV"
-            android:layout_width="109dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="1dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView17" />
-
-        <EditText
             android:id="@+id/inputNumPV"
             android:layout_width="92dp"
             android:layout_height="48dp"
-            android:layout_marginStart="120dp"
             android:layout_marginTop="1dp"
+            android:layout_marginEnd="28dp"
             android:ems="10"
             android:inputType="number"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-        <EditText
-            android:id="@+id/inputCCVFromV"
-            android:layout_width="92dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="1dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintStart_toEndOf="@+id/inputAgencyV"
-            app:layout_constraintTop_toBottomOf="@+id/textView19" />
-
-        <EditText
-            android:id="@+id/inputCCVToV"
-            android:layout_width="92dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginEnd="18dp"
-            android:ems="10"
-            android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/inputCCVFromV"
-            app:layout_constraintTop_toBottomOf="@+id/textView19" />
-
-        <EditText
-            android:id="@+id/inputNumGCV"
-            android:layout_width="109dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="2dp"
-            android:ems="10"
-            android:inputType="number"
-            app:layout_constraintStart_toEndOf="@+id/inputNumPV"
-            app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
-        <EditText
-            android:id="@+id/inputCountryV"
-            android:layout_width="98dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="120dp"
-            android:layout_marginTop="1dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
         <EditText
             android:id="@+id/inputLPV"
             android:layout_width="109dp"
             android:layout_height="48dp"
             android:layout_marginTop="1dp"
-            android:layout_marginEnd="9dp"
+            android:layout_marginEnd="28dp"
             android:ems="10"
             android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/inputNumPV"
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
         <EditText
             android:id="@+id/inputAdressV"
             android:layout_width="144dp"
             android:layout_height="48dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="1dp"
             android:ems="10"
             android:inputType="textPersonName"
@@ -333,7 +187,7 @@
             android:layout_width="144dp"
             android:layout_height="48dp"
             android:layout_marginTop="1dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="60dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:textSize="14sp"
@@ -345,7 +199,7 @@
             android:layout_width="144dp"
             android:layout_height="48dp"
             android:layout_marginTop="1dp"
-            android:layout_marginEnd="28dp"
+            android:layout_marginEnd="88dp"
             android:ems="10"
             android:inputType="number"
             android:maxLength="5"
@@ -356,15 +210,178 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="148dp"
-            android:layout_marginTop="624dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="1200dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="20dp"
             android:onClick="openVehicleA"
             android:text="Siguiente"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="12dp"
+            android:text="Estaba estacionado/aparcado"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:text="Sale de un estacionamiento"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:text="Iba a estacionar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:text="Salía de un aparcamiento, a un lugar privado, a un camino de tierra"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+
+        <CheckBox
+            android:id="@+id/checkBox5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="1dp"
+            android:text="Entraba de un aparcamiento, a un lugar privado, a un camino de tierra"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+
+        <CheckBox
+            android:id="@+id/checkBox6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:text="Circulaba por una plaza de sentido giratorio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox7" />
+
+        <CheckBox
+            android:id="@+id/checkBox10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:text="Circulaba en el mismo sentido y en carril diferente"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox6" />
+
+        <CheckBox
+            android:id="@+id/checkBox12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="1dp"
+            android:text="Cambiaba de carril"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox10" />
+
+        <CheckBox
+            android:id="@+id/checkBox7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="1dp"
+            android:text="Entraba a una plaza de sentido giratorio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+
+        <CheckBox
+            android:id="@+id/checkBox14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:text="Adelantaba"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox12" />
+
+        <CheckBox
+            android:id="@+id/checkBox15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:text="Invadía la parte reservada a la circulación en sentido inverso"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox14" />
+
+        <CheckBox
+            android:id="@+id/checkBox16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:text="Giraba a la izquierda"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox15" />
+
+        <CheckBox
+            android:id="@+id/checkBox17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:text="Giraba a la derecha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox16" />
+
+        <CheckBox
+            android:id="@+id/checkBox18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:text="Daba marcha atrás"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox17" />
+
+        <CheckBox
+            android:id="@+id/checkBox19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:text="Venía de la derecha (en un cruce)"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox18" />
+
+        <CheckBox
+            android:id="@+id/checkBox20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:text="No respetó la señal de preferencia o semáforo en rojo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox19" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</RelativeLayout>
-
+</ScrollView>
 
