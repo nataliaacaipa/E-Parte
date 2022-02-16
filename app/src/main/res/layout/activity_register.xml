@@ -80,7 +80,7 @@
             app:layout_constraintTop_toBottomOf="@+id/inputNameR" />
 
         <Button
-            android:id="@+id/bRegisterV"
+            android:id="@+id/bRegisterR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"

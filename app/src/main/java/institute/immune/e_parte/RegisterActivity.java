@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -11,6 +12,7 @@ public class RegisterActivity extends AppCompatActivity {
     private MyOpenHelper db;
     private EditText name, mail, password, passwordC;
     private TextView message;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,8 @@ public class RegisterActivity extends AppCompatActivity {
         else {
             db.añadirUsuario(name.getText().toString(), mail.getText().toString(), password.getText().toString());
             message.setVisibility(View.INVISIBLE);
+            button.setText(R.string.resgisterUser);
+            button.setEnabled(false);
         }
     }
 
@@ -59,6 +63,7 @@ public class RegisterActivity extends AppCompatActivity {
             password = findViewById(R.id.inputPasswordR);
             passwordC = findViewById(R.id.inputCPasswordR);
             message = findViewById(R.id.txtMessage);
+            button = findViewById(R.id.bRegisterR);
     }
 
     
