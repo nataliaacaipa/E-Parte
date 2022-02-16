@@ -68,3 +68,5 @@ public class Home extends AppCompatActivity {
         msg = findViewById(R.id.txtWarningH);
     }
 }
+
+//https://us.123rf.com/450wm/sudowoodo/sudowoodo1512/sudowoodo151200030/49820989-icono-amarillo-del-sem%C3%A1foro-ilustraci%C3%B3n-vectorial-en-estilo-de-dibujos-animados-plana-.jpg
