@@ -18,8 +18,8 @@ public class Vehicle2Activity extends AppCompatActivity {
 
     }
 
-    public void openVehicleBData(View view) {
-        intent = new Intent(this,Report2Activity.class);
+    public void openEnd(View view) {
+        intent = new Intent(this,EndActivity.class);
         startActivity(intent);
     }
     public void onClick(View view) {
