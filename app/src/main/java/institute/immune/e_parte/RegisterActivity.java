@@ -20,9 +20,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         db = new MyOpenHelper(this);
-
         bindings();
-
         message.setVisibility(View.INVISIBLE);
 
     }

@@ -2,6 +2,7 @@ package institute.immune.e_parte;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +12,7 @@ import android.widget.Toast;
 public class NewVehicleActivity extends AppCompatActivity {
     EditText name, surname, licensePlate, address, postcode, model, country, policyNumber, agency, gcn, gccfrom, gccto, userID;
     private MyOpenHelper db;
-    private int userIDLogged;
+    Intent intent;
     private Button button;
 
     @Override
@@ -28,8 +29,11 @@ public class NewVehicleActivity extends AppCompatActivity {
             toast(getString(R.string.fieldsEmpty));
         }else {
             db.añadirCoche(name.getText().toString(), surname.getText().toString(), licensePlate.getText().toString() , address.getText().toString(), Integer.parseInt(postcode.getText().toString()), model.getText().toString(), country.getText().toString(), Integer.parseInt(policyNumber.getText().toString()), agency.getText().toString(),Integer.parseInt(gcn.getText().toString()), gccfrom.getText().toString(), gccto.getText().toString(), 1);
-            button.setText(R.string.registerV);
+            toast(getString(R.string.registerV));
             button.setEnabled(false);
+            finish();
+            intent = new Intent(this,MenuActivity.class);
+            startActivity(intent);
         }
     }
 
