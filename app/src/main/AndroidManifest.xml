@@ -10,17 +10,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EParte">
         <activity
+            android:name=".Launcher"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".EndActivity"
             android:exported="false"
-            android:label="Código y parte"/>
+            android:label="Código y parte" />
         <activity
             android:name=".Report2Activity"
             android:exported="false"
-            android:label="Datos vehículo B"/>
+            android:label="Datos vehículo B" />
         <activity
             android:name=".Vehicle2Activity"
             android:exported="false"
-            android:label="Daños vehículo B"/>
+            android:label="Daños vehículo B" />
         <activity
             android:name=".Vehicle1Activity"
             android:exported="false"

@@ -4,17 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_code.xml" value="0.12916666666666668" />
-        <entry key="app/src/main/res/layout/activity_end.xml" value="0.14427083333333332" />
-        <entry key="app/src/main/res/layout/activity_home.xml" value="0.14" />
+        <entry key="app/src/main/res/layout/activity_end.xml" value="0.26979166666666665" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_instructions.xml" value="0.2740036231884058" />
+        <entry key="app/src/main/res/layout/activity_launcher.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.24864130434782608" />
         <entry key="app/src/main/res/layout/activity_menu.xml" value="0.2740036231884058" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.253125" />
         <entry key="app/src/main/res/layout/activity_report.xml" value="0.2598958333333333" />
-        <entry key="app/src/main/res/layout/activity_report2.xml" value="0.12916666666666668" />
+        <entry key="app/src/main/res/layout/activity_report2.xml" value="0.203125" />
         <entry key="app/src/main/res/layout/activity_vehicle.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/activity_vehicle1.xml" value="0.14427083333333332" />
-        <entry key="app/src/main/res/layout/activity_vehicle2.xml" value="0.14427083333333332" />
+        <entry key="app/src/main/res/layout/activity_vehicle1.xml" value="0.26979166666666665" />
       </map>
     </option>
   </component>
