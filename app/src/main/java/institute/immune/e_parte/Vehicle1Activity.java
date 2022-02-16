@@ -25,7 +25,7 @@ public class Vehicle1Activity extends AppCompatActivity {
     }
 
     public void bindigs(){
-        tv1 = findViewById(R.id.textView);
+        tv1 = findViewById(R.id.textView1);
 
     }
 
