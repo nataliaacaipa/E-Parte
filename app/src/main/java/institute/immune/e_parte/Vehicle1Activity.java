@@ -12,10 +12,18 @@ public class Vehicle1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle1);
+
     }
 
     public void openVehicleBData(View view) {
         intent = new Intent(this,Report2Activity.class);
         startActivity(intent);
+    }
+
+    public void fillData(int userID){
+
+    }
+    public void bindigs(){
+
     }
 }

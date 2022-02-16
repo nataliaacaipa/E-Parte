@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="143dp"
         android:layout_marginTop="303dp"
-        android:text="Volver al menu"
+        android:text="Volver al menú"
         android:onClick="openMenu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
