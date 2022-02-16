@@ -33,6 +33,9 @@ public class Home extends AppCompatActivity {
                 if(checkUser()) {
                     intent = new Intent(this, MenuActivity.class);
                 }
+                else{
+
+                }
                 break;
             case R.id.bRegisterH:
                 intent = new Intent(this,RegisterActivity.class);

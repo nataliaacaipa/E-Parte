@@ -121,7 +121,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         cv.put("userID", userID);
         db.insert("vehicle",null, cv);
     }
-    public ArrayList<Vehicle> showVechicles(){
+   /* public ArrayList<Vehicle> showVechicles(){
         ArrayList<Vehicle> list = new ArrayList<Vehicle>();
         Cursor cursor = db.rawQuery(commmandShowVehicles, null);
         if(cursor != null && cursor.getCount()>0) {
@@ -150,5 +150,5 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         }
         cursor.close();
         return list;
-    }
+    }*/
 }
