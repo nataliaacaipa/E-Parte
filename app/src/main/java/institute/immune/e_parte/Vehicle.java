@@ -4,42 +4,34 @@ public class Vehicle {
     private int id;
     private String name;
     private String surname;
-    private String licensePlate;
     private String address;
     private int postcode;
-    private int iva;
     private String model;
     private String country;
+    private String licensePlate;
+    private String insuranceCompany;
     private int policyNumber;
     private String agency;
     private int gcn;
-    private String gcc;
-    private int damagesInsured;
-    private int driverLicenseNumber;
-    private String category;
-    private String issuedIn;
-    private String validUntil;
+    private String gccfrom;
+    private String gccto;
     private int userID;
 
-    Vehicle(int id, String name, String surname, String licensePlate, String address, int postcode, int iva, String model, String country, int policyNumber, String agency, int gcn, String gcc, int damagesInsured, int driverLicenseNumber, String category, String issuedIn, String validUntil, int userID){
+    Vehicle(int id, String name, String surname, String licensePlate, String address, int postcode, String model, String country, int policyNumber, String insuranceCompany, String agency, int gcn ,String gccfrom, String gccto, int userID){
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.licensePlate = licensePlate;
         this.address = address;
         this.postcode = postcode;
-        this.iva = iva;
         this.model = model;
         this.country = country;
         this.policyNumber = policyNumber;
+        this.insuranceCompany = insuranceCompany;
         this.agency = agency;
         this.gcn = gcn;
-        this.gcc = gcc;
-        this.damagesInsured = damagesInsured;
-        this.driverLicenseNumber = driverLicenseNumber;
-        this.category = category;
-        this.issuedIn = issuedIn;
-        this.validUntil = validUntil;
+        this.gccfrom = gccfrom;
+        this.gccto = gccto;
         this.userID = userID;
     }
 
@@ -67,10 +59,6 @@ public class Vehicle {
         return postcode;
     }
 
-    public int getIva() {
-        return iva;
-    }
-
     public String getModel() {
         return model;
     }
@@ -91,28 +79,8 @@ public class Vehicle {
         return gcn;
     }
 
-    public String getGcc() {
-        return gcc;
-    }
-
-    public int getDamagesInsured() {
-        return damagesInsured;
-    }
-
-    public int getDriverLicenseNumber() {
-        return driverLicenseNumber;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public String getIssuedIn() {
-        return issuedIn;
-    }
-
-    public String getValidUntil() {
-        return validUntil;
+    public String getInsuranceCompany() {
+        return insuranceCompany;
     }
 
     public int getUserID() {
@@ -142,14 +110,9 @@ public class Vehicle {
         this.postcode = postcode;
     }
 
-    public void setIva(int iva) {
-        this.iva = iva;
-    }
-
     public void setModel(String model) {
         this.model = model;
     }
-
     public void setCountry(String country) {
         this.country = country;
     }
@@ -166,32 +129,29 @@ public class Vehicle {
         this.gcn = gcn;
     }
 
-    public void setGcc(String gcc) {
-        this.gcc = gcc;
-    }
-
-    public void setDamagesInsured(int damagesInsured) {
-        this.damagesInsured = damagesInsured;
-    }
-
-    public void setDriverLicenseNumber(int driverLicenseNumber) {
-        this.driverLicenseNumber = driverLicenseNumber;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public void setIssuedIn(String issuedIn) {
-        this.issuedIn = issuedIn;
-    }
-
-    public void setValidUntil(String validUntil) {
-        this.validUntil = validUntil;
-    }
-
     public void setUserID(int userID) {
         this.userID = userID;
     }
+
+    public void setInsuranceCompany(String insuranceCompany) {
+        this.insuranceCompany = insuranceCompany;
+    }
+    public void setGccfrom(String gccfrom) {
+        this.gccfrom = gccfrom;
+    }
+
+
+    public String getGccfrom() {
+        return gccfrom;
+    }
+
+    public String getGccto() {
+        return gccto;
+    }
+
+    public void setGccto(String gccto) {
+        this.gccto = gccto;
+    }
+
 
 }

@@ -18,7 +18,8 @@ public class MyOpenHelper extends SQLiteOpenHelper {
      */
     private static final String command1 = "CREATE TABLE  user (_ID integer PRIMARY KEY AUTOINCREMENT, name text, mail text, password text)";
     private static final String command2 = "CREATE TABLE  vechicle (_ID integer PRIMARY KEY AUTOINCREMENT,  licensePlate text, name text, surname text, adress text, postcode integer, iva boolean, model text , country text, policyNumber integer, agency text, gCNumber integer, caducityGC text, damagesInsured boolean, driverLicenseNumber integer, category text, issued text, validUntil text, userID integer, FOREIGN KEY(userID) REFERENCES user(_ID))";
-    private static final String commandMostrarUsuarios = "SELECT _ID, name, mail, password from user";
+    private static final String commandShowUsers = "SELECT _ID, name, mail, password from user";
+    private static final String commmandShowVehicles = "SELECT name, surname, licensePlate, address, postcode, iva, model, country, policyNumber, agency, gnc, gcc, damages ";
     private SQLiteDatabase db;
 
     /** Constructor de la clase MyOpenHelper que crea y obtiene la base de datos.
@@ -69,7 +70,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
      */
     public ArrayList<User> showUsers(){
         ArrayList<User> list = new ArrayList<User>();
-        Cursor cursor = db.rawQuery(commandMostrarUsuarios, null);
+        Cursor cursor = db.rawQuery(commmandShowVehicles, null);
         if(cursor != null && cursor.getCount()>0) {
             cursor.moveToFirst();
             do {
@@ -111,4 +112,23 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         cv.put("userID", userID);
         db.insert("vehicle",null, cv);
     }
+    public ArrayList<User> showVechicles(){
+        ArrayList<User> list = new ArrayList<User>();
+        Cursor cursor = db.rawQuery(commandShowUsers, null);
+        if(cursor != null && cursor.getCount()>0) {
+            cursor.moveToFirst();
+            do {
+                @SuppressLint("Range") String name = cursor.getString(cursor.getColumnIndex("name"));
+                @SuppressLint("Range") String mail = cursor.getString(cursor.getColumnIndex("mail"));
+                @SuppressLint("Range") int id = cursor.getInt(cursor.getColumnIndex("_ID"));
+                @SuppressLint("Range") String password = cursor.getString(cursor.getColumnIndex("password"));
+                User user = new User(id ,name, mail, password);
+                list.add(user);
+                System.out.println("\nID: " + id + "\nName: " + name + "/ E-mail: " + mail + "/ Password: " + password + "\n");
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        return list;
+    }
+
 }
