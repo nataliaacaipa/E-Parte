@@ -14,7 +14,7 @@ public class Report2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_report2);
     }
 
-    public void openVehicleB(View view) {
+    public void openVehicleA(View view) {
         intent = new Intent(this,Vehicle2Activity.class);
         startActivity(intent);
     }
