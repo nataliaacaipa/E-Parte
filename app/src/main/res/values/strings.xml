@@ -15,15 +15,14 @@
     <string name="hintMailR">Correo*</string>
 
     <string name="buttonRegisterR">registrar</string>
-    <string name="instructions">Bloque 1:  los datos básicos del accidente
-El primer paso es dejar claro los datos básicos del siniestro, esto es: fecha, hora, lugar (lo más exacto posible)... También hay que indicar si se han sufrido daños materiales y/o personales, cuántos vehículos se han visto implicados, si se han producido daños en el mobiliario urbano o a terceras personas y, muy importante, si ha habido testigos. Bloque 2: conductor A y conductor B
-En el parte amistoso de accidentes encontrarás dos apartados, uno pintado en azul para el conductor A y otro pintado en amarillo para el conductor B. Es muy importante tener claro quién es el A y quién es el B para no mezclar los datos. En cada apartado, además de los datos del coche (nombre del asegurado, compañía aseguradora, conductor y, muy importante, el punto inicial del accidente. En este bloque también se anotan los distintos daños que hayan sufrido los vehículos. También es el lugar para reflejar algunas observaciones que se quiera hacer constar.  Bloque 3: el croquis
-Hora de dibujar. No hace falta ser un artista, lo importante es ser generosos en detalles.
-Esta parte es la destinada a explicar cómo se ha producido el accidente. Su contenido es determinante porque será lo que dictamine en un primer momento quién ha tenido la culpa.
-Para no encontrarte con sorpresas desagradables a posteriori  no seas parco en detalles. Explica si el coche estaba adelantando, si estaba bien o mal estacionado, si respetó o no alguna señal... Cualquier detalle, aunque te parezca poco importante, ayudar.</string>
+    <string name="txt1I">Bloque 1:  los datos básicos del accidente
+El primer paso es dejar claro los datos básicos del siniestro, esto es: fecha, hora, lugar (lo más exacto posible)... También hay que indicar si se han sufrido daños materiales y/o personales, cuántos vehículos se han visto implicados, si se han producido daños en el mobiliario urbano o a terceras personas y, muy importante, si ha habido testigos.</string>
     <string name="bReportM">hacer parte</string>
     <string name="bInstructionsM">Instrucciones</string>
     <string name="bAddCarM">Añadir coche</string>
     <string name="passwordEquals">Las contraseñas no coinciden</string>
     <string name="fieldsEmpty">Por favor rellena todos los campos</string>
+    <string name="txtTitleI">Instrucciones</string>
+    <string name="txt2I">Bloque 2: conductor A y conductor B En el parte amistoso de accidentes encontrarás dos apartados, uno pintado en azul para el conductor A y otro pintado en amarillo para el conductor B. Es muy importante tener claro quién es el A y quién es el B para no mezclar los datos. En cada apartado, además de los datos del coche (nombre del asegurado, compañía aseguradora, conductor y, muy importante, el punto inicial del accidente. En este bloque también se anotan los distintos daños que hayan sufrido los vehículos. También es el lugar para reflejar algunas observaciones que se quiera hacer constar.</string>
+    <string name="txt3I">Bloque 3: el croquis Hora de dibujar. No hace falta ser un artista, lo importante es ser generosos en detalles. Esta parte es la destinada a explicar cómo se ha producido el accidente. Su contenido es determinante porque será lo que dictamine en un primer momento quién ha tenido la culpa. Para no encontrarte con sorpresas desagradables a posteriori no seas parco en detalles. Explica si el coche estaba adelantando, si estaba bien o mal estacionado, si respetó o no alguna señal... Cualquier detalle, aunque te parezca poco importante, ayudar.</string>
 </resources>

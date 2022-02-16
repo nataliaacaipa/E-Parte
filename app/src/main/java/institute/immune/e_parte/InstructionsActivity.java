@@ -12,7 +12,7 @@ public class InstructionsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instructions);
-        tv = findViewById(R.id.textViewInstructions);
+        tv = findViewById(R.id.txt1I);
         tv.setMovementMethod(new ScrollingMovementMethod());
     }
 }
