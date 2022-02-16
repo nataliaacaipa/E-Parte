@@ -47,16 +47,15 @@ public class Home extends AppCompatActivity {
                 finish();
                 intent = new Intent(this,RegisterActivity.class);
                 startActivity(intent);
-
-
                 break;
+
             case R.id.bDownloadH:
                 finish();
                 intent = new Intent(this,CodeActivity.class);
                 startActivity(intent);
-
-
                 break;
+
+
             default:
         }
 

@@ -28,6 +28,10 @@ public class MenuActivity extends AppCompatActivity {
                 intent = new Intent(this, NewVehicleActivity.class);
 
                 break;
+            case R.id.imageViewLogOutM:
+                finish();
+                intent = new Intent(this, Home.class);
+                break;
         }
         startActivity(intent);
     }
