@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EParte">
         <activity
-            android:name=".CarActivity"
+            android:name=".VehicleActivity"
             android:exported="false"
             android:label="Añadir nuevo coche"/>
         <activity

@@ -18,12 +18,13 @@
 
 
         <TextView
-            android:id="@+id/register"
+            android:id="@+id/txtRegisterV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="100dp"
+            android:fontFamily="sans-serif-black"
             android:text="Registro"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +44,7 @@
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/register" />
+            app:layout_constraintTop_toBottomOf="@+id/txtRegisterV" />
 
         <EditText
             android:id="@+id/inputPasswordR"

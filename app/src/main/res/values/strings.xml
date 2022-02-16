@@ -24,4 +24,6 @@ Para no encontrarte con sorpresas desagradables a posteriori  no seas parco en d
     <string name="bReportM">hacer parte</string>
     <string name="bInstructionsM">Instrucciones</string>
     <string name="bAddCarM">Añadir coche</string>
+    <string name="passwordEquals">Las contraseñas no coinciden</string>
+    <string name="fieldsEmpty">Por favor rellena todos los campos</string>
 </resources>

@@ -26,12 +26,12 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void register(View view) {
         showMessage();
-        System.out.println(passwordC + "    " + password);
         if (!password.getText().toString().equals(passwordC.getText().toString())){
-            setMessage("Las contraseñas no coinciden");
+            setMessage(getString(R.string.passwordEquals));
         }
         else {
             db.añadirUsuario(name.getText().toString(), mail.getText().toString(), password.getText().toString());
+            message.setVisibility(View.INVISIBLE);
         }
     }
 
@@ -39,7 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void showMessage(){
         if (isEmpty(name)||isEmpty(mail)||isEmpty(password)||isEmpty(passwordC)){
-            setMessage("Por favor rellena todos los campos");
+            setMessage(getString(R.string.fieldsEmpty));
         }
     }
 

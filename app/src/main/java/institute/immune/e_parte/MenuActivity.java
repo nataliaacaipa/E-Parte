@@ -26,7 +26,7 @@ public class MenuActivity extends AppCompatActivity {
 
                 break;
             case R.id.buttonCar:
-                intent = new Intent(this,CarActivity.class);
+                intent = new Intent(this, VehicleActivity.class);
 
                 break;
         }
