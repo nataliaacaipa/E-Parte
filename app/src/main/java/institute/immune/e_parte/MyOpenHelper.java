@@ -17,7 +17,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
      *  command3 = crea la tabla de partes(report)
      */
     private static final String command1 = "CREATE TABLE  user(_ID integer PRIMARY KEY AUTOINCREMENT, name text, mail text, password text)";
-    private static final String command2 = "CREATE TABLE  vehicle(_ID integer PRIMARY KEY AUTOINCREMENT,  licensePlate text, name text, surname text, address text, postcode integer, model text , country text, policyNumber integer, insuranceCompany text, agency text, gcn integer, gccfrom text,gccto text, category text, validUntil text, userID integer, FOREIGN KEY(userID) REFERENCES user(_ID))";
+    private static final String command2 = "CREATE TABLE  vehicle(_ID integer PRIMARY KEY AUTOINCREMENT,  licensePlate text, name text, surname text, address text, postcode integer, model text , country text, policyNumber integer, insuranceCompany text, agency text, gcn integer, gccfrom text,gccto text, category text, userID integer, FOREIGN KEY(userID) REFERENCES user(_ID))";
     private static final String commandShowUsers = "SELECT _ID, name, mail, password from user";
     private static final String commandPasswordbyMail = "SELECT password from user WHERE mail=?";
     private String realPassword;
@@ -43,6 +43,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     public boolean checkUser(String mail, String password){
         Cursor cursor = db.rawQuery(commandPasswordbyMail, new String[]{mail});
         cursor.moveToFirst();
+
         @SuppressLint("Range") String realPassword = cursor.getString(cursor.getColumnIndex("password"));
         if(password.equals(realPassword)){
             return true;
@@ -103,7 +104,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     /** Método que añade a la base de datos un nuevo vehículo.
      *
      */
-    public void añadirCoche(String name, String surname, String licensePlate, String address, int postcode, String model, String country, int policyNumber, String agency, int gcn, String gccfrom, String gccto,  String validUntil, int userID){
+    public void añadirCoche(String name, String surname, String licensePlate, String address, int postcode, String model, String country, int policyNumber, String agency, int gcn, String gccfrom, String gccto, int userID){
         ContentValues cv = new ContentValues();
         cv.put("name", name);
         cv.put("surname", surname);
@@ -117,7 +118,6 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         cv.put("gcn", gcn);
         cv.put("gccfrom", gccfrom);
         cv.put("gccto", gccto);
-        cv.put("validUntil", validUntil);
         cv.put("userID", userID);
         db.insert("vehicle",null, cv);
     }

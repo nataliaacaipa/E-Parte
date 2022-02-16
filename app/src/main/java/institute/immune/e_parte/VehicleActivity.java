@@ -4,29 +4,39 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 
 public class VehicleActivity extends AppCompatActivity {
-    private EditText name, surname, licensePlate, address, postcode, model, country, policyNumber, agency, gcn, gccfrom, gccto, validUntil, userID;
+    EditText name, surname, licensePlate, address, postcode, model, country, policyNumber, agency, gcn, gccfrom, gccto, userID;
     private MyOpenHelper db;
-    private Button button;
-
+    private int userIDLogged;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle);
         db = new MyOpenHelper(this);
         bindings();
-
     }
 
     public void registerVehicle(View view) {
-        db.añadirCoche("Dani", "González", "352FG3", "ImmuneInstitue", 23456, "Smart", "Spain", 33224252, "mutua", 32422523, "23/1", "08/02", "2020", 1);
-        //System.out.println(db.showVechicles());
-
+        db.añadirCoche(name.getText().toString(), surname.getText().toString(), licensePlate.getText().toString() , address.getText().toString(), Integer.parseInt(postcode.getText().toString()), model.getText().toString(), country.getText().toString(), Integer.parseInt(policyNumber.getText().toString()), agency.getText().toString(),Integer.parseInt(gcn.getText().toString()), gccfrom.getText().toString(), gccto.getText().toString(), 1);
     }
 
-    public void bindings(){
+    public void bindings() {
+        name = findViewById(R.id.inputNameV);
+        surname = findViewById(R.id.inputSurnameV);
+        licensePlate = findViewById(R.id.inputLPV);
+        address = findViewById(R.id.inputAdressV);
+        postcode = findViewById(R.id.inputCodeV);
+        model = findViewById(R.id.inputModelV);
+        country = findViewById(R.id.inputCountryV);
+        policyNumber = findViewById(R.id.inputNumPV);
+        agency = findViewById(R.id.inputAgencyV);
+        gcn = findViewById(R.id.inputNumGCV);
+        gccfrom = findViewById(R.id.inputCCVFromV);
+        gccto = findViewById(R.id.inputCCVToV);
     }
 }
+
+
+
