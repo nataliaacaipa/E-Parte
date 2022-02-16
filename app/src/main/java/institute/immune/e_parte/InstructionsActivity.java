@@ -2,8 +2,10 @@ package institute.immune.e_parte;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.view.View;
 import android.widget.TextView;
 
 public class InstructionsActivity extends AppCompatActivity {
@@ -14,5 +16,9 @@ public class InstructionsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_instructions);
         tv = findViewById(R.id.txt1I);
         tv.setMovementMethod(new ScrollingMovementMethod());
+    }
+
+    public void returnMenu(View view) {
+        finish();
     }
 }
