@@ -10,10 +10,10 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="628dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="632dp"
         android:onClick="openMenu"
-        android:text="Volver al menú"
+        android:text="Descargar parte y volver al menú"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="158dp"
         android:layout_marginTop="24dp"
-        android:text="Button"
+        android:text="Enviar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
