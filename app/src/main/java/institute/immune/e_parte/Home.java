@@ -19,6 +19,7 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         bindings();
+        msg.setVisibility(View.INVISIBLE);
 
 
 
@@ -32,20 +33,29 @@ public class Home extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.bLoginH:
                 if(checkUser()) {
+                    finish();
                     intent = new Intent(this, MenuActivity.class);
                     startActivity(intent);
+
                 }
                 else{
                     msg.setVisibility(View.VISIBLE);
                 }
+
                 break;
             case R.id.bRegisterH:
+                finish();
                 intent = new Intent(this,RegisterActivity.class);
                 startActivity(intent);
+
+
                 break;
             case R.id.bDownloadH:
+                finish();
                 intent = new Intent(this,CodeActivity.class);
                 startActivity(intent);
+
+
                 break;
             default:
         }

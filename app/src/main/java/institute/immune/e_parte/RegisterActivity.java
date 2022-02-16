@@ -2,6 +2,7 @@ package institute.immune.e_parte;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,6 +37,9 @@ public class RegisterActivity extends AppCompatActivity {
             message.setVisibility(View.INVISIBLE);
             button.setText(R.string.resgisterUser);
             button.setEnabled(false);
+            finish();
+            Intent intent = new Intent(this,Home.class);
+            startActivity(intent);
         }
     }
 
