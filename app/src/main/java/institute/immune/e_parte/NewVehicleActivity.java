@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class VehicleActivity extends AppCompatActivity {
+public class NewVehicleActivity extends AppCompatActivity {
     EditText name, surname, licensePlate, address, postcode, model, country, policyNumber, agency, gcn, gccfrom, gccto, userID;
     private MyOpenHelper db;
     private int userIDLogged;

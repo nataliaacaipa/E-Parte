@@ -6,16 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class ReportActivity extends AppCompatActivity {
+public class EndActivity extends AppCompatActivity {
     private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_report);
+        setContentView(R.layout.activity_end);
     }
 
-    public void openVehicleA(View view) {
-        intent = new Intent(this,Vehicle1Activity.class);
+    public void openMenu(View view) {
+        intent = new Intent(this,MenuActivity.class);
         startActivity(intent);
     }
 }

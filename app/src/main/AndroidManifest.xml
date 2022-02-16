@@ -10,17 +10,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EParte">
         <activity
-            android:name=".VehicleActivity"
+            android:name=".EndActivity"
             android:exported="false"
-            android:label="Añadir nuevo coche"/>
+            android:label="Código y parte"/>
+        <activity
+            android:name=".Report2Activity"
+            android:exported="false"
+            android:label="Datos vehículo B"/>
+        <activity
+            android:name=".Vehicle2Activity"
+            android:exported="false"
+            android:label="Daños vehículo B"/>
+        <activity
+            android:name=".Vehicle1Activity"
+            android:exported="false"
+            android:label="Daños vehículo A" />
+        <activity
+            android:name=".NewVehicleActivity"
+            android:exported="false"
+            android:label="Añadir nuevo coche" />
         <activity
             android:name=".ReportActivity"
             android:exported="false"
-            android:label="Parte"/>
+            android:label="Datos accidentado A" />
         <activity
             android:name=".InstructionsActivity"
             android:exported="false"
-            android:label="Instrucciones"/>
+            android:label="Instrucciones" />
         <activity
             android:name=".MenuActivity"
             android:exported="false"
