@@ -16,20 +16,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/e_parte_logo" />
+        app:srcCompat="@drawable/e_partelogo" />
 
     <Button
         android:id="@+id/bLauncherL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="100dp"
         android:onClick="openHome"
         android:text="Entrar"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

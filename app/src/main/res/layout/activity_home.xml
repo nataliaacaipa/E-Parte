@@ -6,109 +6,111 @@
     android:layout_height="match_parent"
     tools:context=".Home">
 
-    <EditText
-        android:id="@+id/mailHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="100dp"
-        android:ems="10"
-        android:hint="@string/placeHolderMail"
-        android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.727"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/bDownloadH"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="152dp"
-        android:onClick="onClick"
-        android:text="@string/guestButtonHomeText"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bRegisterH" />
-
-    <Button
-        android:id="@+id/bLoginH"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="120dp"
-        android:onClick="onClick"
-        android:text="@string/logInButtonText"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtWarningH" />
-
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/txtWarningH"
+        android:layout_width="254dp"
+        android:layout_height="40dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/textViewPasswordHome"
-        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="100dp"
+        android:text="Este correo no está registrado o la contraseña es incorrecta "
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mailHome" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <EditText
+            android:id="@+id/mailHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="100dp"
+            android:ems="10"
+            android:hint="@string/placeHolderMail"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <Button
+            android:id="@+id/bLoginH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="120dp"
+            android:onClick="onClick"
+            android:text="@string/logInButtonText"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordHome" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/textViewPasswordHome"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mailHome" />
 
     <Button
         android:id="@+id/bRegisterH"
         android:layout_width="131dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="132dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="90dp"
         android:layout_marginTop="1dp"
-        android:layout_marginEnd="132dp"
+        android:layout_marginEnd="90dp"
         android:onClick="onClick"
         android:text="@string/registerButtonHomeText"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/textoHomeMail"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/textoHomeMail"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <EditText
-        android:id="@+id/passwordHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="100dp"
-        android:ems="10"
-        android:hint="@string/passwordHomeHint"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.727"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        <EditText
+            android:id="@+id/passwordHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="100dp"
+            android:ems="10"
+            android:hint="@string/passwordHomeHint"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="100dp"
         android:fontFamily="sans-serif-black"
         android:text="Iniciar sesión en E-Parte"
@@ -117,37 +119,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="100dp"
-        android:fontFamily="sans-serif-condensed"
-        android:text="¿Nuevo en E-Parte?"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bLoginH" />
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="100dp"
+            android:fontFamily="sans-serif"
+            android:text="¿Nuevo en E-Parte?"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bLoginH" />
 
-    <TextView
-        android:id="@+id/txtWarningH"
-        android:layout_width="376dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="100dp"
-        android:text="Este correo no está registrado o la contraseña es incorrecta "
-        android:textAlignment="center"
-        android:textSize="13sp"
-        android:textStyle="bold"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordHome" />
+        <Button
+            android:id="@+id/bDownloadH"
+            android:layout_width="197dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="100dp"
+            android:onClick="onClick"
+            android:text="@string/guestButtonHomeText"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bRegisterH" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -11,9 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:adjustViewBounds="false"
+        android:alpha=".75"
         android:cropToPadding="false"
         android:scaleType="center"
-        app:srcCompat="@drawable/trafficlight"
+        app:srcCompat="@drawable/traffic_light"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="29dp" />
 
@@ -22,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="195dp"
         android:layout_marginEnd="120dp"
         android:onClick="onClickMenu"
         android:text="@string/bReportM"
@@ -36,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="132dp"
-        android:layout_marginTop="85dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="132dp"
         android:onClick="onClickMenu"
         android:text="@string/bInstructionsM"
@@ -61,14 +62,14 @@
 
     <ImageView
         android:id="@+id/imageViewLogOutM"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:onClick="onClickMenu"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cerrar_sesion"
-        android:onClick="onClickMenu"/>
+        app:srcCompat="@drawable/logout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

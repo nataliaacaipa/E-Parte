@@ -37,7 +37,7 @@
         <activity
             android:name=".NewVehicleActivity"
             android:exported="false"
-            android:label="Añadir nuevo coche" />
+            android:label="Añadir nuevo vehículo" />
         <activity
             android:name=".ReportActivity"
             android:exported="false"
@@ -64,6 +64,10 @@
             android:label="Inicio">
 
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

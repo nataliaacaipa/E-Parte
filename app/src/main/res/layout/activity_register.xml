@@ -4,124 +4,122 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".RegisterActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60sp"
-        android:layout_marginTop="60sp"
-        android:layout_marginEnd="60sp"
-        android:layout_marginBottom="60sp"
-        android:background="@color/white">
-
-
-        <TextView
-            android:id="@+id/txtRegisterV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="100dp"
-            android:fontFamily="sans-serif-black"
-            android:text="Registro"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/inputNameR"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="60dp"
-            android:ems="10"
-            android:hint="@string/hintNameR"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtRegisterV" />
-
-        <EditText
-            android:id="@+id/inputPasswordR"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="60dp"
-            android:layout_marginBottom="30dp"
-            android:ems="10"
-            android:hint="@string/hintPasswordR"
-            android:inputType="textPassword"
-            android:minHeight="48dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputMailR"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <EditText
-            android:id="@+id/inputMailR"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="60dp"
-            android:ems="10"
-            android:hint="@string/hintMailR"
-            android:inputType="textEmailAddress"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputNameR" />
-
-        <Button
-            android:id="@+id/bRegisterR"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginBottom="20dp"
-            android:onClick="register"
-            android:text="@string/buttonRegisterR"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtMessage" />
-
-        <EditText
-            android:id="@+id/inputCPasswordR"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="60dp"
-            android:ems="10"
-            android:hint="@string/hintCPasswordR"
-            android:inputType="textPassword"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputPasswordR" />
-
-        <TextView
-            android:id="@+id/txtMessage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="120dp"
-            android:layout_marginTop="22dp"
-            android:layout_marginEnd="120dp"
-            android:text="TextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputCPasswordR" />
+            android:layout_marginStart="60sp"
+            android:layout_marginTop="60sp"
+            android:layout_marginEnd="60sp"
+            android:layout_marginBottom="60sp"
+            android:background="@color/white">
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/txtRegisterV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="100dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Registro"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/inputNameR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="60dp"
+                    android:ems="10"
+                    android:hint="@string/hintNameR"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtRegisterV" />
+
+                <EditText
+                    android:id="@+id/inputPasswordR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="60dp"
+                    android:ems="10"
+                    android:hint="@string/hintPasswordR"
+                    android:inputType="textPassword"
+                    android:minHeight="48dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inputMailR" />
+
+                <EditText
+                    android:id="@+id/inputMailR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="60dp"
+                    android:ems="10"
+                    android:hint="@string/hintMailR"
+                    android:inputType="textEmailAddress"
+                    android:minHeight="48dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inputNameR" />
+
+                <Button
+                    android:id="@+id/bRegisterR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_marginBottom="20dp"
+                    android:onClick="register"
+                    android:text="@string/buttonRegisterR"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtMessage" />
+
+                <EditText
+                    android:id="@+id/inputCPasswordR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="60dp"
+                    android:ems="10"
+                    android:hint="@string/hintCPasswordR"
+                    android:inputType="textPassword"
+                    android:minHeight="48dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inputPasswordR" />
+
+                <TextView
+                    android:id="@+id/txtMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="120dp"
+                    android:text="TextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inputCPasswordR" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>
