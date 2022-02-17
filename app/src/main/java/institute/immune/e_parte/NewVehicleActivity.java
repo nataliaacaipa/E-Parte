@@ -46,12 +46,12 @@ public class NewVehicleActivity extends AppCompatActivity {
     }
 
     public void bindings() {
-        name = findViewById(R.id.inputNameV);
-        surname = findViewById(R.id.inputSurnameV);
+        name = findViewById(R.id.inputNameRp);
+        surname = findViewById(R.id.inputSurnameRp2);
         licensePlate = findViewById(R.id.inputLPV);
-        address = findViewById(R.id.inputAdressV);
+        address = findViewById(R.id.inputBirthDateRp);
         postcode = findViewById(R.id.inputCodeV);
-        model = findViewById(R.id.inputModelV);
+        model = findViewById(R.id.inputLicenseNumRp);
         country = findViewById(R.id.inputCountryV);
         policyNumber = findViewById(R.id.inputNumPV);
         agency = findViewById(R.id.inputAgencyV);

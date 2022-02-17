@@ -56,7 +56,7 @@
         android:text="Vehículo"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputAdressV" />
+        app:layout_constraintTop_toBottomOf="@+id/inputBirthDateRp" />
 
     <TextView
         android:id="@+id/textView13"
@@ -67,7 +67,7 @@
         android:text="Aseguradora"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputModelV" />
+        app:layout_constraintTop_toBottomOf="@+id/inputLicenseNumRp" />
 
         <TextView
             android:id="@+id/textView5"
@@ -190,7 +190,7 @@
             android:text="Dirección"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputNameV" />
+            app:layout_constraintTop_toBottomOf="@+id/inputNameRp" />
 
         <TextView
             android:id="@+id/textView6"
@@ -212,10 +212,10 @@
             android:text="Código postal"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputSurnameV" />
+            app:layout_constraintTop_toBottomOf="@+id/inputSurnameRp2" />
 
     <EditText
-        android:id="@+id/inputNameV"
+        android:id="@+id/inputNameRp"
         android:layout_width="144dp"
         android:layout_height="48dp"
         android:layout_marginStart="5dp"
@@ -228,7 +228,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
-        android:id="@+id/inputModelV"
+        android:id="@+id/inputLicenseNumRp"
         android:layout_width="109dp"
         android:layout_height="48dp"
         android:layout_marginStart="5dp"
@@ -314,7 +314,7 @@
             android:layout_marginTop="1dp"
             android:ems="10"
             android:inputType="textPersonName"
-            app:layout_constraintStart_toEndOf="@+id/inputModelV"
+            app:layout_constraintStart_toEndOf="@+id/inputLicenseNumRp"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <EditText
@@ -329,7 +329,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <EditText
-        android:id="@+id/inputAdressV"
+        android:id="@+id/inputBirthDateRp"
         android:layout_width="144dp"
         android:layout_height="48dp"
         android:layout_marginStart="5dp"
@@ -340,7 +340,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         <EditText
-            android:id="@+id/inputSurnameV"
+            android:id="@+id/inputSurnameRp2"
             android:layout_width="144dp"
             android:layout_height="48dp"
             android:layout_marginTop="1dp"

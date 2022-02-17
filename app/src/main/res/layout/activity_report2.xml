@@ -14,17 +14,6 @@
 
 
         <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="5dp"
-            android:text="Permiso válido hasta"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputCodeV" />
-
-        <TextView
             android:id="@+id/txtRegisterV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,7 +47,7 @@
             android:text="Circunstancias"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputModelV" />
+            app:layout_constraintTop_toBottomOf="@+id/inputLicenseNumRp2" />
 
         <TextView
             android:id="@+id/textView5"
@@ -80,7 +69,7 @@
             android:text="Nº permiso conducir"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputAdressV" />
+            app:layout_constraintTop_toBottomOf="@+id/inputBirthDateRp2" />
 
         <TextView
             android:id="@+id/textView24"
@@ -88,12 +77,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="9dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="9dp"
             android:text="Categoría"
             android:textSize="14sp"
-            app:layout_constraintEnd_toStartOf="@+id/textView15"
+            app:layout_constraintEnd_toStartOf="@+id/textView25"
             app:layout_constraintStart_toEndOf="@+id/textView10"
-            app:layout_constraintTop_toBottomOf="@+id/inputAdressV" />
+            app:layout_constraintTop_toBottomOf="@+id/inputBirthDateRp2" />
 
         <TextView
             android:id="@+id/textView7"
@@ -104,7 +92,7 @@
             android:text="Fecha nacimiento"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputNameV" />
+            app:layout_constraintTop_toBottomOf="@+id/inputNameRp2" />
 
         <TextView
             android:id="@+id/textView6"
@@ -126,10 +114,10 @@
             android:text="Dirección"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputSurnameV" />
+            app:layout_constraintTop_toBottomOf="@+id/inputSurnameRp2" />
 
         <EditText
-            android:id="@+id/inputNameV"
+            android:id="@+id/inputNameRp2"
             android:layout_width="144dp"
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
@@ -142,42 +130,40 @@
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <EditText
-            android:id="@+id/inputModelV"
+            android:id="@+id/inputLicenseNumRp2"
             android:layout_width="109dp"
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="1dp"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="number"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
         <EditText
-            android:id="@+id/inputModelV2"
+            android:id="@+id/inputCategoryRp2"
             android:layout_width="109dp"
             android:layout_height="48dp"
             android:layout_marginStart="31dp"
             android:layout_marginTop="1dp"
-            android:layout_marginEnd="52dp"
             android:ems="10"
             android:inputType="textPersonName"
-            app:layout_constraintEnd_toStartOf="@+id/inputNumPV"
-            app:layout_constraintStart_toEndOf="@+id/inputModelV"
+            app:layout_constraintStart_toEndOf="@+id/inputLicenseNumRp2"
             app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
         <EditText
-            android:id="@+id/inputNumPV"
-            android:layout_width="92dp"
+            android:id="@+id/inputValidDateRp2"
+            android:layout_width="109dp"
             android:layout_height="48dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="1dp"
-            android:layout_marginEnd="10dp"
             android:ems="10"
-            android:inputType="number"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toEndOf="@+id/inputCategoryRp2"
+            app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
         <EditText
-            android:id="@+id/inputAdressV"
+            android:id="@+id/inputBirthDateRp2"
             android:layout_width="144dp"
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
@@ -188,7 +174,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         <EditText
-            android:id="@+id/inputSurnameV"
+            android:id="@+id/inputSurnameRp2"
             android:layout_width="144dp"
             android:layout_height="48dp"
             android:layout_marginTop="1dp"
@@ -200,17 +186,15 @@
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
         <EditText
-            android:id="@+id/inputCodeV"
+            android:id="inputAddressRp2"
             android:layout_width="144dp"
             android:layout_height="48dp"
-            android:layout_marginStart="45dp"
             android:layout_marginTop="1dp"
             android:layout_marginEnd="70dp"
             android:ems="10"
-            android:inputType="number"
+            android:inputType="textPersonName"
             android:maxLength="5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/inputAdressV"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         <Button
@@ -387,6 +371,16 @@
             android:text="No respetó la señal de preferencia o semáforo en rojo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/checkBox19" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:text="Permiso válido hasta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputBirthDateRp2" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
