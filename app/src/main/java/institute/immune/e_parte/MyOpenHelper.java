@@ -3,14 +3,18 @@ package institute.immune.e_parte;
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 
 
 public class MyOpenHelper extends SQLiteOpenHelper {
+    private EditText nameTxt, surname, licensePlate, address, postcode, model, country, policyNumber, insuranceCompany, agency, gcn, gccfrom, gccto, userID;
+
     /** Queries necesarias:
      *  command1 = crea la tabla de usuarios(user)
      *  command2 = crea la tabla de vehículos(vehicle)
@@ -19,8 +23,9 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     private static final String command1 = "CREATE TABLE  user(_ID integer PRIMARY KEY AUTOINCREMENT, name text, mail text, password text)";
     private static final String command2 = "CREATE TABLE  vehicle(_ID integer PRIMARY KEY AUTOINCREMENT,  licensePlate text, name text, surname text, address text, postcode integer, model text , country text, policyNumber integer, insuranceCompany text, agency text, gcn integer, gccfrom text,gccto text, category text, userID integer, FOREIGN KEY(userID) REFERENCES user(_ID))";
     private static final String commandShowUsers = "SELECT _ID, name, mail, password from user";
+    private static final String getID = "SELECT _ID from user WHERE mail=?";
+    private static final String commmandShowVehicles = "SELECT * from vehicle";
     private static final String commandPasswordbyMail = "SELECT password from user WHERE mail=?";
-    private String realPassword;
 
     private SQLiteDatabase db;
 
@@ -38,6 +43,8 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(command1);
         sqLiteDatabase.execSQL(command2);
+        sqLiteDatabase.execSQL(getID);
+        bindings();
     }
 
     public boolean checkUser(String mail, String password){
@@ -55,6 +62,20 @@ public class MyOpenHelper extends SQLiteOpenHelper {
             return false;
         }
     }
+
+    public int getUserID(String mail){
+        Cursor cursor = db.rawQuery(getID, new String[]{mail});
+        cursor.moveToFirst();
+        if (cursor != null && cursor.getCount()>0) {
+            @SuppressLint("Range") int id = cursor.getInt(cursor.getColumnIndex("_ID"));
+            return id;
+
+        }else {
+            System.out.println("hola");
+            return 0;
+        }
+    }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
@@ -104,10 +125,12 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         return list;
     }
 
+
+
     /** Método que añade a la base de datos un nuevo vehículo.
      *
      */
-    public void añadirCoche(String name, String surname, String licensePlate, String address, int postcode, String model, String country, int policyNumber, String agency, int gcn, String gccfrom, String gccto, int userID){
+    public void añadirCoche(String name, String surname, String licensePlate, String address, int postcode, String model, String country, int policyNumber, String insuranceCompany, String agency, int gcn, String gccfrom, String gccto, int userID){
         ContentValues cv = new ContentValues();
         cv.put("name", name);
         cv.put("surname", surname);
@@ -117,14 +140,16 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         cv.put("model", model);
         cv.put("country", country);
         cv.put("policyNumber", policyNumber);
+        cv.put("insuranceCompany", insuranceCompany);
         cv.put("agency", agency);
         cv.put("gcn", gcn);
         cv.put("gccfrom", gccfrom);
         cv.put("gccto", gccto);
         cv.put("userID", userID);
         db.insert("vehicle",null, cv);
+        showVechicles();
     }
-   /* public ArrayList<Vehicle> showVechicles(){
+    public ArrayList<Vehicle> showVechicles(){
         ArrayList<Vehicle> list = new ArrayList<Vehicle>();
         Cursor cursor = db.rawQuery(commmandShowVehicles, null);
         if(cursor != null && cursor.getCount()>0) {
@@ -144,14 +169,54 @@ public class MyOpenHelper extends SQLiteOpenHelper {
                 @SuppressLint("Range") int gcn = cursor.getInt(cursor.getColumnIndex("gcn"));
                 @SuppressLint("Range") String gccfrom = cursor.getString(cursor.getColumnIndex("gccfrom"));
                 @SuppressLint("Range") String gccto = cursor.getString(cursor.getColumnIndex("gccto"));
-                @SuppressLint("Range") String validUntil = cursor.getString(cursor.getColumnIndex("validUntil"));
                 @SuppressLint("Range") int userID = cursor.getInt(cursor.getColumnIndex("userID"));
 
-                Vehicle vehicle = new Vehicle(id, name, surname, licensePlate, address, postcode, model, country, policyNumber,insuranceCompany, agency, gcn, gccfrom, gccto, validUntil, userID);
+                Vehicle vehicle = new Vehicle(id, name, surname, licensePlate, address, postcode, model, country, policyNumber,insuranceCompany, agency, gcn, gccfrom, gccto, userID);
                 list.add(vehicle);
+
+
+                for (Vehicle v : list){
+                    System.out.println(v.getName());
+                }
+
+                /*
+                surname.setText(vehicle.getSurname());
+                licensePlate.setText(vehicle.getLicensePlate());
+                address.setText(vehicle.getAddress());
+                postcode.setText(vehicle.getPostcode());
+                model.setText(vehicle.getModel());
+                country.setText(vehicle.getCountry());
+                insuranceCompany.setText(vehicle.getInsuranceCompany());
+                policyNumber.setText(vehicle.getPolicyNumber());
+                agency.setText(vehicle.getAgency());
+                gcn.setText(vehicle.getGcn());
+                gccfrom.setText(vehicle.getGccfrom());
+                gccto.setText(vehicle.getGccto());
+
+                String a = vehicle.getName();
+                System.out.println(a);*/
+
+
             } while (cursor.moveToNext());
         }
         cursor.close();
+
         return list;
-    }*/
+    }
+
+    public void bindings() {
+        nameTxt = nameTxt.findViewById(R.id.inputNameVD);/*
+        surname = surname.findViewById(R.id.inputSurnameVD);
+        licensePlate = licensePlate.findViewById(R.id.inputSurnameVD);
+        address = address.findViewById(R.id.inputAddressVD);
+        postcode = postcode.findViewById(R.id.inputCodeVD);
+        model = model.findViewById(R.id.inputModelVD);
+        country = country.findViewById(R.id.inputCountryVD);
+        policyNumber = policyNumber.findViewById(R.id.inputNumPVD);
+        insuranceCompany = insuranceCompany.findViewById(R.id.inputNameAVD);
+        agency = agency.findViewById(R.id.inputAgencyVD);
+        gcn = gcn.findViewById(R.id.inputNumGCVD);
+        gccfrom = gccfrom.findViewById(R.id.inputCCVFromVD);
+        gccto = gccto.findViewById(R.id.inputCCVToVD);*/
+    }
 }

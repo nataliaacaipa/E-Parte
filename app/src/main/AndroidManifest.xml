@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EParte">
         <activity
+            android:name=".VehicleDataActivity"
+            android:exported="false" />
+        <activity
             android:name=".Launcher"
             android:exported="true">
             <intent-filter>
@@ -61,9 +64,7 @@
         <activity
             android:name=".Home"
             android:exported="true"
-            android:label="Inicio">
-
-        </activity>
+            android:label="Inicio"></activity>
 
         <meta-data
             android:name="preloaded_fonts"

@@ -9,10 +9,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Home extends AppCompatActivity {
-    private Intent intent;
+    private Intent intent, i;
     private EditText mail, password;
     private MyOpenHelper op;
-    private TextView msg;
+    private TextView msg, user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,12 @@ public class Home extends AppCompatActivity {
                 if(checkUser()) {
                     finish();
                     intent = new Intent(this, MenuActivity.class);
+                    i = new Intent(this, VehicleDataActivity.class);
+                    intent.putExtra("user", mail.getText().toString());
+                    i.putExtra("user", mail.getText().toString());
+
                     startActivity(intent);
+
 
                 }
                 else{
@@ -79,7 +84,7 @@ public class Home extends AppCompatActivity {
         mail = findViewById(R.id.mailHome);
         password = findViewById(R.id.passwordHome);
         msg = findViewById(R.id.txtWarningH);
+        user = findViewById(R.id.txtUserM);
     }
 }
 
-//https://us.123rf.com/450wm/sudowoodo/sudowoodo1512/sudowoodo151200030/49820989-icono-amarillo-del-sem%C3%A1foro-ilustraci%C3%B3n-vectorial-en-estilo-de-dibujos-animados-plana-.jpg

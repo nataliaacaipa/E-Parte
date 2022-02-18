@@ -17,7 +17,7 @@ public class Vehicle {
     private String gccto;
     private int userID;
 
-    Vehicle(int id, String name, String surname, String licensePlate, String address, int postcode, String model, String country, int policyNumber, String insuranceCompany, String agency, int gcn, String s, String gccfrom, String gccto, int userID){
+    public Vehicle(int id, String name, String surname, String licensePlate, String address, int postcode, String model, String country, int policyNumber, String insuranceCompany, String agency, int gcn, String gccfrom, String gccto, int userID){
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -34,6 +34,8 @@ public class Vehicle {
         this.gccto = gccto;
         this.userID = userID;
     }
+
+
 
     public int getId() {
         return id;
