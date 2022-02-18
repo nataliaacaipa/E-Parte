@@ -72,7 +72,6 @@
         android:layout_marginEnd="90dp"
         android:onClick="onClick"
         android:text="@string/registerButtonHomeText"
-        android:textColor="#000000"
         android:textSize="14sp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"

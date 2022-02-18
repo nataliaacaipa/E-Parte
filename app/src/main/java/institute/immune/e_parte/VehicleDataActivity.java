@@ -22,35 +22,51 @@ public class VehicleDataActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_data);
-
         bindings();
+        fillData(1);
 
     }
 
     public void onClickRV(View view) {
 
-        switch (view.getId()) {
-            case R.id.bRegisterVD:
-                intent = new Intent(this, ReportActivity.class);
-                break;
-        }
+        intent = new Intent(this, ReportActivity.class);
         startActivity(intent);
-    }
+}
 
     public void bindings() {
-        name = findViewById(R.id.inputNameRp);
-        surname = findViewById(R.id.inputSurnameRp);
-        licensePlate = findViewById(R.id.inputLPV);
-        address = findViewById(R.id.inputBirthDateRp);
-        postcode = findViewById(R.id.inputCodeV);
-        model = findViewById(R.id.inputLicenseNumRp);
-        country = findViewById(R.id.inputCountryV);
-        policyNumber = findViewById(R.id.inputNumPV);
-        insuranceCompany = findViewById(R.id.inputNameAV);
-        agency = findViewById(R.id.inputAgencyV);
-        gcn = findViewById(R.id.inputNumGCV);
-        gccfrom = findViewById(R.id.inputCCVFromV);
-        gccto = findViewById(R.id.inputCCVToV);
+        name = findViewById(R.id.inputNameVD);
+        surname = findViewById(R.id.inputSurnameVD);
+        licensePlate = findViewById(R.id.inputLPVD);
+        address = findViewById(R.id.inputAddressVD);
+        postcode = findViewById(R.id.inputCodeVD);
+        model = findViewById(R.id.inputModelVD);
+        country = findViewById(R.id.inputCodeVD);
+        policyNumber = findViewById(R.id.inputNumPVD);
+        insuranceCompany = findViewById(R.id.inputNameAVD);
+        agency = findViewById(R.id.inputAgencyVD);
+        gcn = findViewById(R.id.inputNumGCVD);
+        gccfrom = findViewById(R.id.inputCCVFromVD);
+        gccto = findViewById(R.id.inputCCVToVD);
+
+    }
+
+    public void fillData(int userID){
+        MyOpenHelper op = new MyOpenHelper(this);
+        ArrayList<Vehicle> vehiclesList = op.showVechicles();
+        Vehicle userVehicle = vehiclesList.get(userID);
+        name.setText(userVehicle.getName());
+        surname.setText(userVehicle.getSurname());
+        licensePlate.setText(userVehicle.getLicensePlate());
+        address.setText(userVehicle.getAddress());
+        postcode.setText(String.valueOf(userVehicle.getPostcode()));
+        model.setText(userVehicle.getModel());
+        country.setText(userVehicle.getCountry());
+        policyNumber.setText(String.valueOf(userVehicle.getPolicyNumber()));
+        insuranceCompany.setText(userVehicle.getInsuranceCompany());
+        agency.setText(userVehicle.getAgency());
+        gcn.setText(String.valueOf(userVehicle.getGcn()));
+        gccfrom.setText(userVehicle.getGccfrom());
+        gccto.setText(userVehicle.getGccto());
 
     }
 
