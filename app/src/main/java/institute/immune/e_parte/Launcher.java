@@ -1,12 +1,17 @@
 package institute.immune.e_parte;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.View;
 
 import java.io.File;
@@ -25,12 +30,7 @@ public class Launcher extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
 
-        createTXT();
-
-
-
-
-
+        checkSelfPermission();
     }
 
     public void openHome(View view) {
@@ -40,6 +40,42 @@ public class Launcher extends AppCompatActivity {
     
     }
 
+
+    public void checkSelfPermission(){
+        int permissionCheck = ContextCompat.checkSelfPermission(
+                this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+        if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
+            Log.i("Mensaje", "No se tiene permiso para leer.");
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 225);
+        } else {
+            Log.i("Mensaje", "Se tiene permiso para leer y escribir!");
+            //createTXT();
+            txt();
+        }
+    }
+
+
+
+    public void txt(){
+        File direccion = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        File fich;
+
+
+        try {
+            fich = File.createTempFile("tempFile", ".txt", direccion);
+            FileWriter writer = new FileWriter(fich);
+            writer.append("heeeeeeey");
+            writer.flush();
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+    /*
     public void createTXT(){
         try {
 
@@ -60,5 +96,5 @@ public class Launcher extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 }

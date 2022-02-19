@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class VehicleDataActivity extends AppCompatActivity {
 
     private Intent intent;
-    private ArrayList<Vehicle> vehicles;
+    private MyOpenHelper op;
     private EditText name, surname, licensePlate, address, postcode, model, country, policyNumber, insuranceCompany, agency, gcn, gccfrom, gccto, userID;
 
     @Override
@@ -49,6 +49,11 @@ public class VehicleDataActivity extends AppCompatActivity {
         gcn = findViewById(R.id.inputNumGCVD);
         gccfrom = findViewById(R.id.inputCCVFromVD);
         gccto = findViewById(R.id.inputCCVToVD);
+
+    }
+
+    public void getUserId(){
+        op = new MyOpenHelper(this);
 
     }
 

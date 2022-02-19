@@ -13,7 +13,6 @@ import java.util.ArrayList;
 
 
 public class MyOpenHelper extends SQLiteOpenHelper {
-    private EditText nameTxt, surname, licensePlate, address, postcode, model, country, policyNumber, insuranceCompany, agency, gcn, gccfrom, gccto, userID;
 
     /** Queries necesarias:
      *  command1 = crea la tabla de usuarios(user)
@@ -44,7 +43,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(command1);
         sqLiteDatabase.execSQL(command2);
         sqLiteDatabase.execSQL(getID);
-        bindings();
+        //bindings();
     }
 
     public boolean checkUser(String mail, String password){
@@ -72,7 +71,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
 
         }else {
             System.out.println("hola");
-            return 0;
+            return 1;
         }
     }
 
@@ -179,24 +178,6 @@ public class MyOpenHelper extends SQLiteOpenHelper {
                     System.out.println(v.getName());
                 }
 
-                /*
-                surname.setText(vehicle.getSurname());
-                licensePlate.setText(vehicle.getLicensePlate());
-                address.setText(vehicle.getAddress());
-                postcode.setText(vehicle.getPostcode());
-                model.setText(vehicle.getModel());
-                country.setText(vehicle.getCountry());
-                insuranceCompany.setText(vehicle.getInsuranceCompany());
-                policyNumber.setText(vehicle.getPolicyNumber());
-                agency.setText(vehicle.getAgency());
-                gcn.setText(vehicle.getGcn());
-                gccfrom.setText(vehicle.getGccfrom());
-                gccto.setText(vehicle.getGccto());
-
-                String a = vehicle.getName();
-                System.out.println(a);*/
-
-
             } while (cursor.moveToNext());
         }
         cursor.close();
@@ -204,19 +185,5 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         return list;
     }
 
-    public void bindings() {
-        nameTxt = nameTxt.findViewById(R.id.inputNameVD);/*
-        surname = surname.findViewById(R.id.inputSurnameVD);
-        licensePlate = licensePlate.findViewById(R.id.inputSurnameVD);
-        address = address.findViewById(R.id.inputAddressVD);
-        postcode = postcode.findViewById(R.id.inputCodeVD);
-        model = model.findViewById(R.id.inputModelVD);
-        country = country.findViewById(R.id.inputCountryVD);
-        policyNumber = policyNumber.findViewById(R.id.inputNumPVD);
-        insuranceCompany = insuranceCompany.findViewById(R.id.inputNameAVD);
-        agency = agency.findViewById(R.id.inputAgencyVD);
-        gcn = gcn.findViewById(R.id.inputNumGCVD);
-        gccfrom = gccfrom.findViewById(R.id.inputCCVFromVD);
-        gccto = gccto.findViewById(R.id.inputCCVToVD);*/
-    }
+
 }
