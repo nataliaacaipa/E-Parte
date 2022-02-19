@@ -16,7 +16,7 @@ public class VehicleDataActivity extends AppCompatActivity {
 
     private Intent intent;
     private MyOpenHelper op;
-    private EditText name, surname, licensePlate, address, postcode, model, country, policyNumber, insuranceCompany, agency, gcn, gccfrom, gccto, userID;
+    private EditText mail, name, surname, licensePlate, address, postcode, model, country, policyNumber, insuranceCompany, agency, gcn, gccfrom, gccto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +24,8 @@ public class VehicleDataActivity extends AppCompatActivity {
         setContentView(R.layout.activity_vehicle_data);
         bindings();
 
-        //Aqui pon el userID que quieras
-        fillData(1);
+        //fillData(1);
+        fillData(getUserId());
 
     }
 
@@ -50,11 +50,13 @@ public class VehicleDataActivity extends AppCompatActivity {
         gccfrom = findViewById(R.id.inputCCVFromVD);
         gccto = findViewById(R.id.inputCCVToVD);
 
+        mail = findViewById(R.id.mailHome);
+
     }
 
-    public void getUserId(){
+    public int getUserId(){
         op = new MyOpenHelper(this);
-
+        return op.getUserID(mail.getText().toString());
     }
 
     public void fillData(int userID){

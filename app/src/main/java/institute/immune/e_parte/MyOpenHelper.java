@@ -69,10 +69,12 @@ public class MyOpenHelper extends SQLiteOpenHelper {
             @SuppressLint("Range") int id = cursor.getInt(cursor.getColumnIndex("_ID"));
             return id;
 
-        }else {
+        }
+        else {
             System.out.println("hola");
             return 1;
         }
+
     }
 
 

@@ -25,6 +25,7 @@ import java.util.Date;
 
 public class Launcher extends AppCompatActivity {
     private Intent intent;
+    private File fich;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -59,8 +60,6 @@ public class Launcher extends AppCompatActivity {
 
     public void txt(){
         File direccion = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-        File fich;
-
 
         try {
             fich = File.createTempFile("tempFile", ".txt", direccion);
