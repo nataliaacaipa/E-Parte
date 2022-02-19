@@ -51,30 +51,11 @@ public class Launcher extends AppCompatActivity {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 225);
         } else {
             Log.i("Mensaje", "Se tiene permiso para leer y escribir!");
-            //createTXT();
-            txt();
+            createTXT();
+
         }
     }
 
-
-
-    public void txt(){
-        File direccion = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-
-        try {
-            fich = File.createTempFile("tempFile", ".txt", direccion);
-            FileWriter writer = new FileWriter(fich);
-            writer.append("heeeeeeey");
-            writer.flush();
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
-
-    /*
     public void createTXT(){
         try {
 
@@ -84,16 +65,18 @@ public class Launcher extends AppCompatActivity {
             if (!root.exists()) {
                 root.mkdirs(); // this will create folder.
             }
-            File filepath = new File(getFilesDir().getAbsolutePath(), "Datos_Parte" + ".txt"); // file path to save
+            File filepath = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES), "Datos_Parte" + ".txt"); // file path to save
             FileWriter writer = new FileWriter(filepath);
-            writer.append("heeeeeeey");
+            writer.append("String");
             writer.flush();
             writer.close();
+
+
 
 
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }*/
+    }
 }
