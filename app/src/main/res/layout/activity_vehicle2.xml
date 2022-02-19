@@ -13,9 +13,11 @@
         android:layout_width="136dp"
         android:layout_height="136dp"
         android:background="@drawable/textview_border"
+        android:onClick="onClick"
+        android:text="1,1"
+        android:textColor="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -23,9 +25,11 @@
         android:layout_height="136dp"
         android:layout_marginStart="136dp"
         android:background="@drawable/textview_border"
+        android:onClick="onClick"
+        android:text="2,1"
+        android:textColor="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
@@ -33,9 +37,11 @@
         android:layout_height="136dp"
         android:layout_marginStart="272dp"
         android:background="@drawable/textview_border"
+        android:onClick="onClick"
+        android:text="3,1"
+        android:textColor="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
@@ -43,9 +49,11 @@
         android:layout_height="136dp"
         android:layout_marginTop="136dp"
         android:background="@drawable/textview_border"
+        android:onClick="onClick"
+        android:text="1,2"
+        android:textColor="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
@@ -54,9 +62,11 @@
         android:layout_marginStart="136dp"
         android:layout_marginTop="136dp"
         android:background="@drawable/textview_border"
+        android:onClick="onClick"
+        android:text="2,2"
+        android:textColor="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
@@ -65,9 +75,11 @@
         android:layout_marginStart="272dp"
         android:layout_marginTop="136dp"
         android:background="@drawable/textview_border"
+        android:onClick="onClick"
+        android:text="3,2"
+        android:textColor="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView7"
@@ -75,9 +87,11 @@
         android:layout_height="136dp"
         android:layout_marginTop="272dp"
         android:background="@drawable/textview_border"
+        android:onClick="onClick"
+        android:text="1,3"
+        android:textColor="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView8"
@@ -86,9 +100,11 @@
         android:layout_marginStart="136dp"
         android:layout_marginTop="272dp"
         android:background="@drawable/textview_border"
+        android:onClick="onClick"
+        android:text="2,3"
+        android:textColor="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView9"
@@ -97,9 +113,11 @@
         android:layout_marginStart="272dp"
         android:layout_marginTop="272dp"
         android:background="@drawable/textview_border"
+        android:onClick="onClick"
+        android:text="3,3"
+        android:textColor="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView10"
@@ -107,9 +125,11 @@
         android:layout_height="136dp"
         android:layout_marginTop="408dp"
         android:background="@drawable/textview_border"
+        android:onClick="onClick"
+        android:text="1,4"
+        android:textColor="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView11"
@@ -118,9 +138,11 @@
         android:layout_marginStart="136dp"
         android:layout_marginTop="408dp"
         android:background="@drawable/textview_border"
+        android:onClick="onClick"
+        android:text="2,4"
+        android:textColor="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView12"
@@ -129,9 +151,11 @@
         android:layout_marginStart="272dp"
         android:layout_marginTop="408dp"
         android:background="@drawable/textview_border"
+        android:onClick="onClick"
+        android:text="3,4"
+        android:textColor="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView13"
@@ -139,9 +163,11 @@
         android:layout_height="136dp"
         android:layout_marginTop="544dp"
         android:background="@drawable/textview_border"
+        android:onClick="onClick"
+        android:text="1,5"
+        android:textColor="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView14"
@@ -150,9 +176,11 @@
         android:layout_marginStart="136dp"
         android:layout_marginTop="544dp"
         android:background="@drawable/textview_border"
+        android:onClick="onClick"
+        android:text="2,5"
+        android:textColor="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView15"
@@ -161,9 +189,11 @@
         android:layout_marginStart="272dp"
         android:layout_marginTop="544dp"
         android:background="@drawable/textview_border"
+        android:onClick="onClick"
+        android:text="3,5"
+        android:textColor="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onClick"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/bDownloadE"
