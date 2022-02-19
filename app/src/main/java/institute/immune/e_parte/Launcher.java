@@ -41,7 +41,7 @@ public class Launcher extends AppCompatActivity {
     
     }
 
-
+//
     public void checkSelfPermission(){
         int permissionCheck = ContextCompat.checkSelfPermission(
                 this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
