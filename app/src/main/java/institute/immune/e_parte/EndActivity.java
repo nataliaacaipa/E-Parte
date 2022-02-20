@@ -22,7 +22,7 @@ public class EndActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end);
         bindings();
-        code.setText(String.valueOf(Math.round(Math.random()*1_000_000) + 1));
+        code.setText(String.valueOf(1000000 + Math.round(Math.random()*1_000_000) + 1));
     }
 
     public void openMenu(View view) {
