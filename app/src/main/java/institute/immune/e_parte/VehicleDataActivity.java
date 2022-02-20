@@ -23,9 +23,10 @@ public class VehicleDataActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_data);
         bindings();
-
+        String user = getIntent().getStringExtra("user");
+        System.out.println(getUserId(user));
         //fillData(1);
-        fillData(getUserId());
+        fillData(getUserId(user));
 
     }
 
@@ -50,19 +51,17 @@ public class VehicleDataActivity extends AppCompatActivity {
         gccfrom = findViewById(R.id.inputCCVFromVD);
         gccto = findViewById(R.id.inputCCVToVD);
 
-        mail = findViewById(R.id.mailHome);
 
     }
 
-    public int getUserId(){
+    public Integer getUserId(String user){
         op = new MyOpenHelper(this);
-        return op.getUserID(mail.getText().toString());
+        return op.getUserID(user);
     }
 
     public void fillData(int userID){
-        MyOpenHelper op = new MyOpenHelper(this);
         ArrayList<Vehicle> vehiclesList = op.showVechicles();
-        Vehicle userVehicle = vehiclesList.get(userID);
+        Vehicle userVehicle = vehiclesList.get(userID -2);
         name.setText(userVehicle.getName());
         surname.setText(userVehicle.getSurname());
         licensePlate.setText(userVehicle.getLicensePlate());

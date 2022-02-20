@@ -27,6 +27,7 @@ public class MenuActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.buttonReport:
                 intent = new Intent(this, VehicleDataActivity.class);
+                intent.putExtra("user", txtUser.getText().toString());
                 break;
             case R.id.buttonInstructions:
                 intent = new Intent(this,InstructionsActivity.class);

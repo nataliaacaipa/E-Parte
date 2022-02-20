@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 import android.widget.EditText;
 
 import java.util.ArrayList;
@@ -63,10 +64,11 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     }
 
     public int getUserID(String mail){
-        Cursor cursor = db.rawQuery(getID, new String[]{mail});
+        Cursor cursor = db.rawQuery(getID, new String[]{(mail)});
         cursor.moveToFirst();
         if (cursor != null && cursor.getCount()>0) {
             @SuppressLint("Range") int id = cursor.getInt(cursor.getColumnIndex("_ID"));
+            Log.d("Se ecnontro", "HEEEEEEEEEEEEEEY");
             return id;
 
         }
