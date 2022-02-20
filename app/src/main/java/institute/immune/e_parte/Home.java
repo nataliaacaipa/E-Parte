@@ -36,6 +36,7 @@ public class Home extends AppCompatActivity {
                     finish();
                     intent = new Intent(this, MenuActivity.class);
                     i = new Intent(this, VehicleDataActivity.class);
+                    //hey ;)
                     intent.putExtra("user", mail.getText().toString());
                     i.putExtra("userMail", mail.getText().toString());
 
