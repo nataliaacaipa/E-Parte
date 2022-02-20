@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class EndActivity extends AppCompatActivity {
@@ -14,12 +15,14 @@ public class EndActivity extends AppCompatActivity {
     private EditText mail;
     private Button button;
     private Button button2;
+    private TextView code;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end);
         bindings();
+        code.setText(String.valueOf(Math.round(Math.random()*1_000_000) + 1));
     }
 
     public void openMenu(View view) {
@@ -47,5 +50,6 @@ public class EndActivity extends AppCompatActivity {
         mail= findViewById(R.id.inputMailE);
         button = findViewById(R.id.bSendReportE);
         button2 = findViewById(R.id.bDownloadE);
+        code = findViewById(R.id.textViewCode);
     }
 }
