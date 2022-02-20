@@ -35,8 +35,9 @@ public class Home extends AppCompatActivity {
                 if(checkUser()) {
                     finish();
                     intent = new Intent(this, MenuActivity.class);
-                    i = new Intent(this, VehicleDataActivity.class);
                     //hey  ;)
+                    i = new Intent(this, VehicleDataActivity.class);
+
 
                     intent.putExtra("user", mail.getText().toString());
                     i.putExtra("userMail", mail.getText().toString());
@@ -86,7 +87,7 @@ public class Home extends AppCompatActivity {
         mail = findViewById(R.id.mailHome);
         password = findViewById(R.id.passwordHome);
         msg = findViewById(R.id.txtWarningH);
-        user = findViewById(R.id.txtUserM);
+        //user = findViewById(R.id.txtUserM);
     }
 }
 
