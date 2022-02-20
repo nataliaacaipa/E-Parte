@@ -9,16 +9,13 @@ import android.widget.TextView;
 
 public class MenuActivity extends AppCompatActivity {
     private Intent intent;
-    private TextView txtUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        String user = getIntent().getStringExtra("user");
-        txtUser = findViewById(R.id.txtUserM);
-        txtUser.setText(user);
+
 
     }
 
@@ -38,12 +35,21 @@ public class MenuActivity extends AppCompatActivity {
                 intent = new Intent(this, NewVehicleActivity.class);
 
                 break;
+                /*
             case R.id.imageViewLogOutM:
                 finish();
                 intent = new Intent(this, Home.class);
+                break;*/
+            default:
+                intent = new Intent(this,Home.class);
                 break;
         }
         startActivity(intent);
     }
 
+    public void onClickLogOut(View view) {
+        finish();
+        intent = new Intent(this, Home.class);
+        startActivity(intent);
+    }
 }

@@ -27,4 +27,10 @@ El primer paso es dejar claro los datos básicos del siniestro, esto es: fecha, 
     <string name="txt3I">Bloque 3: el croquis Hora de dibujar. No hace falta ser un artista, lo importante es ser generosos en detalles. Esta parte es la destinada a explicar cómo se ha producido el accidente. Su contenido es determinante porque será lo que dictamine en un primer momento quién ha tenido la culpa. Para no encontrarte con sorpresas desagradables a posteriori no seas parco en detalles. Explica si el coche estaba adelantando, si estaba bien o mal estacionado, si respetó o no alguna señal... Cualquier detalle, aunque te parezca poco importante, ayudar.</string>
     <string name="registerV">Vehículo registrado</string>
     <string name="resgisterUser">Usuario registrado</string>
+    <string name="txtWarningLogInH">Este correo no está registrado o la contraseña es incorrecta</string>
+    <string name="txtTitleH">Iniciar sesión en E-Parte</string>
+    <string name="txtRegisterH">¿Nuevo en E-Parte?</string>
+    <string name="bToHomeL">Entrar</string>
+    <string name="txtCodeE">CÓDIGO:</string>
+    <string name="inputMailE">E-mail accidentado B</string>
 </resources>
