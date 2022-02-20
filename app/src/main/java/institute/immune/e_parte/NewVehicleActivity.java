@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**Activity that allows the user to register a new vehicle
+ *
+ */
 public class NewVehicleActivity extends AppCompatActivity {
     private EditText name, surname, licensePlate, address, postcode, model, country, policyNumber, insuranceCompany, agency, gcn, gccfrom, gccto, userID;
     private MyOpenHelper db;
@@ -23,6 +26,9 @@ public class NewVehicleActivity extends AppCompatActivity {
         bindings();
     }
 
+    /**Method that registers a new vehicle in the table vehicle.
+     * @param view
+     */
     public void registerVehicle(View view) {
 
         if(isEmpty(name)||isEmpty(surname)||isEmpty(licensePlate)||isEmpty(address)||isEmpty(postcode)||isEmpty(model)||isEmpty(country)||isEmpty(policyNumber)||isEmpty(insuranceCompany)||isEmpty(agency)||isEmpty(gcn)||isEmpty(gccfrom)||isEmpty(gccto)){
@@ -38,14 +44,26 @@ public class NewVehicleActivity extends AppCompatActivity {
         }
     }
 
+    /**Modular method that gets the string from a editText and checks if its null
+     *
+     * @param x: edittext given to check
+     * @return: answer(true, false)
+     */
     public boolean isEmpty(EditText x){
         return x.getText().toString().isEmpty();
     }
 
+    /**Method that pops a message to the user:
+     *
+     * @param text: Text to be displayed
+     */
     public void toast(String text){
         Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();
     }
 
+    /**Injects all views.
+     *
+     */
     public void bindings() {
         name = findViewById(R.id.inputNameRp);
         surname = findViewById(R.id.inputSurnameRp2);
@@ -61,27 +79,6 @@ public class NewVehicleActivity extends AppCompatActivity {
         gccfrom = findViewById(R.id.inputCCVFromV);
         gccto = findViewById(R.id.inputCCVToV);
         button = findViewById(R.id.bRegisterR);
-    }
-
-
-    public void sendData(){
-        Intent i = new Intent(this, VehicleDataActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putString("name", name.getText().toString());
-        bundle.putString("surname", surname.getText().toString());
-        bundle.putString("licensePlate", licensePlate.getText().toString());
-        bundle.putString("address", address.getText().toString());
-        bundle.putString("postcode", postcode.getText().toString());
-        bundle.putString("model", model.getText().toString());
-        bundle.putString("country", country.getText().toString());
-        bundle.putString("policyNumber", policyNumber.getText().toString());
-        bundle.putString("agency", agency.getText().toString());
-        bundle.putString("gcn", gcn.getText().toString());
-        bundle.putString("gccfrom", gccfrom.getText().toString());
-        bundle.putString("gccto", gccto.getText().toString());
-
-        i.putExtras(bundle);
-
     }
 }
 

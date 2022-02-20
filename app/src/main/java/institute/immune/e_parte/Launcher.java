@@ -23,6 +23,9 @@ import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**The launcher activity that shows the logo and a button to enter the app
+ *
+ */
 public class Launcher extends AppCompatActivity {
     private Intent intent;
     private File fich;
@@ -34,6 +37,9 @@ public class Launcher extends AppCompatActivity {
         checkSelfPermission();
     }
 
+    /**When the user wants to enter te app
+     *
+     */
     public void openHome(View view) {
         finish();
         intent = new Intent(this,Home.class);

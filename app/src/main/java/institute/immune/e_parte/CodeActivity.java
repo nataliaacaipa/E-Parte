@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+/**This activity will ask a code and will send the correct report to the mail given.
+ *
+ */
 public class CodeActivity extends AppCompatActivity {
 
     @Override

@@ -12,13 +12,12 @@ import android.widget.EditText;
 
 import java.util.ArrayList;
 
-
+/**This class will be the tool that we are going to use to connect with our database (SQLite)
+ *
+ */
 public class MyOpenHelper extends SQLiteOpenHelper {
 
-    /** Queries necesarias:
-     *  command1 = crea la tabla de usuarios(user)
-     *  command2 = crea la tabla de vehículos(vehicle)
-     *  command3 = crea la tabla de partes(report)
+    /** All Queries needed
      */
     private static final String command1 = "CREATE TABLE  user(_ID integer PRIMARY KEY AUTOINCREMENT, name text, mail text, password text)";
     private static final String command2 = "CREATE TABLE  vehicle(_ID integer PRIMARY KEY AUTOINCREMENT,  licensePlate text, name text, surname text, address text, postcode integer, model text , country text, policyNumber integer, insuranceCompany text, agency text, gcn integer, gccfrom text,gccto text, category text, userID integer, FOREIGN KEY(userID) REFERENCES user(_ID))";
@@ -48,6 +47,12 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         //bindings();
     }
 
+    /**Method that checks id the mail and password given are from the same user and returns the answer.
+     *
+     * @param mail: mail to check match
+     * @param password: password to check match
+     * @return: if its correct or not (true, false)
+     */
     public boolean checkUser(String mail, String password){
         Cursor cursor = db.rawQuery(commandPasswordbyMail, new String[]{mail});
         cursor.moveToFirst();
@@ -64,6 +69,11 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         }
     }
 
+    /**Method that gives the userID from a given mail.
+     *
+     * @param mail:mail given to get his userID
+     * @return
+     */
     public int getUserID(String mail){
         Cursor cursor = db.rawQuery(getID, new String[]{(mail)});
         cursor.moveToFirst();
@@ -153,6 +163,11 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         db.insert("vehicle",null, cv);
         showVechicles();
     }
+
+    /**Method that gives all vehicles in the table vehicles.
+     *
+     * @return list with all vehicles
+     */
     public ArrayList<Vehicle> showVechicles(){
         ArrayList<Vehicle> list = new ArrayList<Vehicle>();
         Cursor cursor = db.rawQuery(commmandShowVehicles, null);
@@ -190,7 +205,11 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         return list;
     }
 
-
+    /**Method that return the _ID from a vechicle with a given userID.
+     *
+     * @param userID: userID given to get his vehicle ID in the table vechicle
+     * @return: _ID for the userID given
+     */
     public int getIDByUserID(int userID) {
         Cursor cursor = db.rawQuery(commandIDByuserID, new String[]{String.valueOf((userID))});
         if(cursor != null && cursor.getCount()>0) {

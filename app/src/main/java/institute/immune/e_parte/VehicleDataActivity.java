@@ -9,6 +9,9 @@ import android.widget.EditText;
 
 import java.util.ArrayList;
 
+/**The activity that asks the driver/vechicle data that fills automatically.
+ *
+ */
 public class VehicleDataActivity extends AppCompatActivity {
 
     private Intent intent;
@@ -21,18 +24,20 @@ public class VehicleDataActivity extends AppCompatActivity {
         setContentView(R.layout.activity_vehicle_data);
         bindings();
         String user = getIntent().getStringExtra("user");
-        System.out.println(getUserId(user));
-        //fillData(1);
         fillData(getUserId(user));
 
     }
-
+    /** When the user wants to go to the next step.
+     *
+     */
     public void onClickRV(View view) {
 
         intent = new Intent(this, ReportActivity.class);
         startActivity(intent);
 }
-
+    /**Injects all views.
+     *
+     */
     public void bindings() {
         name = findViewById(R.id.inputNameVD);
         surname = findViewById(R.id.inputSurnameVD);
@@ -51,11 +56,20 @@ public class VehicleDataActivity extends AppCompatActivity {
 
     }
 
+    /**Method that gives the userID given his mail(user);
+     *
+     * @param user
+     * @return
+     */
     public Integer getUserId(String user){
         op = new MyOpenHelper(this);
         return op.getUserID(user);
     }
 
+    /**Method that fills all fields given a user id from the database
+     *
+     * @param userID:userID given to get data
+     */
     public void fillData(int userID){
         ArrayList<Vehicle> vehiclesList = op.showVechicles();
         int posVehicle = op.getIDByUserID(userID);
@@ -76,47 +90,4 @@ public class VehicleDataActivity extends AppCompatActivity {
 
     }
 
-
-
-
-
-    /*
-    public void createVehicles(){
-        String user = getIntent().getStringExtra("user");
-
-        MyOpenHelper myOpenHelper = new MyOpenHelper(getApplicationContext());
-
-        Bundle bundle = getIntent().getExtras();
-
-        vehicles = new ArrayList<>();
-        String name = bundle.getString("name");
-        String surname = bundle.getString("surname");
-        String licensePlate = bundle.getString("licensePlate");
-        String address = bundle.getString("address");
-        int postcode = Integer.parseInt(bundle.getString("postcode"));
-        String model = bundle.getString("model");
-        String country = bundle.getString("country");
-        int policynumber = Integer.parseInt(bundle.getString("policynumber"));
-        String insuranceCompany = bundle.getString("insuranceCompany");
-        String agency = bundle.getString("agency");
-        int gcc = Integer.parseInt(bundle.getString("gcc"));
-        String gccfrom = bundle.getString("gccfrom");
-        String gccto = bundle.getString("gccto");
-        int userId = myOpenHelper.getUserID(user);
-
-        vehicles.add(new Vehicle(1, name, surname, licensePlate, address, postcode, model, country, policynumber, insuranceCompany, agency, gcc, gccfrom, gccto, userId));
-    }
-
-    public void nameVehicleList(){
-        ArrayList<String> namesVehicles = new ArrayList<>();
-
-        for (Vehicle vehicle: vehicles){
-            String name = vehicle.getName();
-            namesVehicles.add(name);
-        }
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,namesVehicles);
-        vehiclesList.setAdapter(adapter);
-
-    }*/
 }

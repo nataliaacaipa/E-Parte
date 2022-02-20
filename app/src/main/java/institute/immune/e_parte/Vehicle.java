@@ -1,5 +1,7 @@
 package institute.immune.e_parte;
-
+/**Vechicle class to read table vehicle un our database
+ *
+ */
 public class Vehicle {
     private int id;
     private String name;

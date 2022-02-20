@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
+/**Activity that recieves the data of the damages of the vahicle 2
+ *
+ */
 public class Vehicle2Activity extends AppCompatActivity {
     private Intent intent;
     TextView tv1, tv2, tv3, tv4, tv5, tv6, tv7, tv8, tv9, tv10, tv11, tv12, tv13, tv14, tv15, tv16;
@@ -17,11 +19,17 @@ public class Vehicle2Activity extends AppCompatActivity {
         bindigs();
 
     }
-
+    /** When the user wants to go to the next step(End).
+     *
+     */
     public void openEnd(View view) {
         intent = new Intent(this,EndActivity.class);
         startActivity(intent);
     }
+
+    /**The interacrive method that changes the textviews background, the ones that the user selects.
+     *
+     */
     public void onClick(View view) {
 
         switch (view.getId()){
@@ -76,6 +84,10 @@ public class Vehicle2Activity extends AppCompatActivity {
         }
 
     }
+
+    /**Injects all views.
+     *
+     */
     public void bindigs(){
         tv1 = findViewById(R.id.textView1);
         tv2 = findViewById(R.id.textView2);

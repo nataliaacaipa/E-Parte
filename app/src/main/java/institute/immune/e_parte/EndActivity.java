@@ -15,6 +15,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**Last activity from the report that gives a code and the chance to send te report to the other driver.
+ *
+ */
 public class EndActivity extends AppCompatActivity {
     private Intent intent;
     private EditText mail;
@@ -31,6 +34,9 @@ public class EndActivity extends AppCompatActivity {
         code.setText(generatedCode());
     }
 
+    /**When the user has finished and wants to go back to the menu
+     *
+     */
     public void openMenu(View view) {
         createTXT();
         toast("Parte descargado");
@@ -40,6 +46,9 @@ public class EndActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**When the user wants to send a report to the other involved.(Vechicle B)
+     *
+     */
     public void sendReport(View view){
         if (!mail.getText().toString().isEmpty()){
             button.setText("Enviado");
@@ -76,10 +85,17 @@ public class EndActivity extends AppCompatActivity {
     }
 
 
+    /**Method that pops a message to the user:
+     *
+     * @param text: Text to be displayed
+     */
     public void toast(String text){
         Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();
     }
 
+    /**Injects all views.
+     *
+     */
     public void bindings(){
         mail= findViewById(R.id.inputMailE);
         button = findViewById(R.id.bSendReportE);

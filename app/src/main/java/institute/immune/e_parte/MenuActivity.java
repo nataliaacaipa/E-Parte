@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+/**The activity that has the menu of all registered and logged in users
+ *
+ */
 public class MenuActivity extends AppCompatActivity {
     private Intent intent;
     private TextView txtUser;
@@ -22,6 +25,9 @@ public class MenuActivity extends AppCompatActivity {
 
     }
 
+    /**Menu that opens the activity that the user has chosen.
+     *
+     */
     public void onClickMenu(View view) {
 
         switch (view.getId()) {
@@ -50,6 +56,9 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**When the user wants to log out.
+     *
+     */
     public void onClickLogOut(View view) {
         finish();
         intent = new Intent(this, Home.class);

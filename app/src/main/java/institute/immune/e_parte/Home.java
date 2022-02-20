@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**This activity has the log in and register into the app, and also allows to enter a code to get the report.
+ *
+ */
 public class Home extends AppCompatActivity {
     private Intent intent, i;
     private EditText mail, password;
@@ -82,7 +85,9 @@ public class Home extends AppCompatActivity {
         }
 
     }
-
+    /**Injects all views.
+     *
+     */
     public void bindings(){
         mail = findViewById(R.id.mailHome);
         password = findViewById(R.id.passwordHome);

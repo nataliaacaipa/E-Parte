@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**The activity that allows the user to register a new user.
+ *
+ */
 public class RegisterActivity extends AppCompatActivity {
     private MyOpenHelper db;
     private EditText name, mail, password, passwordC;
@@ -25,6 +28,9 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+    /**When the user wants to register a user.
+     *
+     */
     public void register(View view) {
         showMessage();
         if (!password.getText().toString().equals(passwordC.getText().toString())){
@@ -42,23 +48,35 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 
-
+    /**Modular method to check empty fields.
+     *
+     */
     public void showMessage(){
         if (isEmpty(name)||isEmpty(mail)||isEmpty(password)||isEmpty(passwordC)){
             setMessage(getString(R.string.fieldsEmpty));
         }
     }
 
+    /**Modular method to set a message and making it visible.
+     *
+     * @param text
+     */
     public void setMessage(String text){
         message.setVisibility(View.VISIBLE);
         message.setText(text);
     }
 
-
+    /**Modular method that gets the string from a editText and checks if its null
+     *
+     * @param x: edittext given to check
+     * @return: answer(true, false)
+     */
     public boolean isEmpty(EditText x){
         return x.getText().toString().isEmpty();
     }
-
+    /**Injects all views.
+     *
+     */
     public void bindings(){
             name = findViewById(R.id.inputNameR);
             mail = findViewById(R.id.inputMailR);

@@ -1,5 +1,8 @@
 package institute.immune.e_parte;
 
+/**User class to read table user un our database
+ *
+ */
 public class User {
     private int id;
     private String name;
