@@ -5,10 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -61,7 +58,8 @@ public class VehicleDataActivity extends AppCompatActivity {
 
     public void fillData(int userID){
         ArrayList<Vehicle> vehiclesList = op.showVechicles();
-        Vehicle userVehicle = vehiclesList.get(userID -2);
+        int posVehicle = op.getIDByUserID(userID);
+        Vehicle userVehicle = vehiclesList.get(posVehicle);
         name.setText(userVehicle.getName());
         surname.setText(userVehicle.getSurname());
         licensePlate.setText(userVehicle.getLicensePlate());

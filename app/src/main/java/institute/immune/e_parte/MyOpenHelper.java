@@ -26,6 +26,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     private static final String getID = "SELECT _ID from user WHERE mail=?";
     private static final String commmandShowVehicles = "SELECT * from vehicle";
     private static final String commandPasswordbyMail = "SELECT password from user WHERE mail=?";
+    private static final String commandIDByuserID = "SELECT _ID from vehicle WHERE userID=?";
 
     private SQLiteDatabase db;
 
@@ -190,4 +191,15 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     }
 
 
+    public int getIDByUserID(int userID) {
+        Cursor cursor = db.rawQuery(commandIDByuserID, new String[]{String.valueOf((userID))});
+        if(cursor != null && cursor.getCount()>0) {
+            cursor.moveToFirst();
+            do {
+                @SuppressLint("Range") int id = cursor.getInt(cursor.getColumnIndex("_ID"));
+                return id;
+            } while (cursor.moveToNext());
+        }
+        return 0;
+    }
 }
