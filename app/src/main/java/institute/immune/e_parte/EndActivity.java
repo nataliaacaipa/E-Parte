@@ -4,11 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class EndActivity extends AppCompatActivity {
     private Intent intent;
@@ -16,16 +21,18 @@ public class EndActivity extends AppCompatActivity {
     private Button button;
     private Button button2;
     private TextView code;
+    private String num;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end);
         bindings();
-        code.setText(String.valueOf(1000000 + Math.round(Math.random()*1_000_000) + 1));
+        code.setText(generatedCode());
     }
 
     public void openMenu(View view) {
+        createTXT();
         toast("Parte descargado");
         button2.setEnabled(false);
         finish();
@@ -41,6 +48,33 @@ public class EndActivity extends AppCompatActivity {
             toast("escribe el mail");
         }
     }
+
+    public String generatedCode(){
+        num = String.valueOf(1000000 + Math.round(Math.random()*1_000_000) + 1);
+        return num;
+    }
+
+
+    public void createTXT(){
+        try {
+
+            // this will create a new name everytime and unique
+            File root = new File(Environment.getExternalStorageDirectory(), "Notes");
+            // if external memory exists and folder with name Notes
+            if (!root.exists()) {
+                root.mkdirs(); // this will create folder.
+            }
+            File filepath = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES), "Datos_Parte" + ".txt"); // file path to save
+            FileWriter writer = new FileWriter(filepath);
+            writer.append(generatedCode());
+            writer.flush();
+            writer.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void toast(String text){
         Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();

@@ -51,32 +51,8 @@ public class Launcher extends AppCompatActivity {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 225);
         } else {
             Log.i("Mensaje", "Se tiene permiso para leer y escribir!");
-            createTXT();
 
         }
     }
 
-    public void createTXT(){
-        try {
-
-            // this will create a new name everytime and unique
-            File root = new File(Environment.getExternalStorageDirectory(), "Notes");
-            // if external memory exists and folder with name Notes
-            if (!root.exists()) {
-                root.mkdirs(); // this will create folder.
-            }
-            File filepath = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES), "Datos_Parte" + ".txt"); // file path to save
-            FileWriter writer = new FileWriter(filepath);
-            writer.append("String");
-            writer.flush();
-            writer.close();
-
-
-
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }
