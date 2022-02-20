@@ -9,13 +9,16 @@ import android.widget.TextView;
 
 public class MenuActivity extends AppCompatActivity {
     private Intent intent;
+    private TextView txtUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-
+        String user = getIntent().getStringExtra("user");
+        txtUser = findViewById(R.id.txtUserM);
+        txtUser.setText(user);
 
     }
 
