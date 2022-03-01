@@ -27,7 +27,9 @@ public class VehicleDataActivity extends AppCompatActivity {
         String user = getIntent().getStringExtra("user");
         try {
             fillData(getUserId(user));
-        }catch (IndexOutOfBoundsException ignored){}
+        }catch (IndexOutOfBoundsException ignored){
+            clearFields();
+        }
 
 
 
@@ -50,7 +52,7 @@ public class VehicleDataActivity extends AppCompatActivity {
         address = findViewById(R.id.inputAddressVD);
         postcode = findViewById(R.id.inputCodeVD);
         model = findViewById(R.id.inputModelVD);
-        country = findViewById(R.id.inputCodeVD);
+        country = findViewById(R.id.inputCountryVD);
         policyNumber = findViewById(R.id.inputNumPVD);
         insuranceCompany = findViewById(R.id.inputNameAVD);
         agency = findViewById(R.id.inputAgencyVD);
@@ -93,6 +95,21 @@ public class VehicleDataActivity extends AppCompatActivity {
         gccfrom.setText(userVehicle.getGccfrom());
         gccto.setText(userVehicle.getGccto());
 
+    }
+    public void clearFields(){
+        name.setText("");
+        surname.setText("");
+        licensePlate.setText("");
+        address.setText("");
+        postcode.setText("");
+        model.setText("");
+        country.setText("");
+        policyNumber.setText("");
+        insuranceCompany.setText("");
+        agency.setText("");
+        gcn.setText("");
+        gccfrom.setText("");
+        gccto.setText("");
     }
 
 }
