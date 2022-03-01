@@ -73,7 +73,7 @@ public class EndActivity extends AppCompatActivity {
             if (!root.exists()) {
                 root.mkdirs(); // this will create folder.
             }
-            File filepath = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES), "Datos_Parte" + ".txt"); // file path to save
+            File filepath = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS), "Datos_Parte" + ".txt"); // file path to save
             FileWriter writer = new FileWriter(filepath);
             writer.append(generatedCode());
             writer.flush();

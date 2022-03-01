@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="484dp"
+        android:layout_marginTop="420dp"
         android:layout_marginEnd="50dp"
         android:onClick="openMenu"
         android:text="Obtener parte y volver al menú"
@@ -71,5 +71,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputMailE" />
+
+    <TextView
+        android:id="@+id/txtPath"
+        android:layout_width="323dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="174dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="174dp"
+        android:text="@string/path"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bDownloadE" />
+
+    <TextView
+        android:id="@+id/txtTitlePath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="174dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="174dp"
+        android:text="@string/txtTitlePath"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bDownloadE" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
