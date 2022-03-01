@@ -33,4 +33,7 @@ El primer paso es dejar claro los datos básicos del siniestro, esto es: fecha, 
     <string name="bToHomeL">Entrar</string>
     <string name="txtCodeE">CÓDIGO:</string>
     <string name="inputMailE">E-mail accidentado B</string>
+    <string name="relleno_datos_vehiculo">Relleno datos vehículo A</string>
+    <string name="btnRegVD">Register</string>
+    <string name="tvAsegurado">Asegurado(veáse póliza de seguro)</string>
 </resources>

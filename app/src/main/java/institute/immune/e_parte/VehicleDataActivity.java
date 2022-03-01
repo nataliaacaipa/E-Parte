@@ -24,7 +24,12 @@ public class VehicleDataActivity extends AppCompatActivity {
         setContentView(R.layout.activity_vehicle_data);
         bindings();
         String user = getIntent().getStringExtra("user");
-        fillData(getUserId(user));
+        try {
+            fillData(getUserId(user));
+        }catch (IndexOutOfBoundsException e){
+
+        }
+
 
     }
     /** When the user wants to go to the next step.
