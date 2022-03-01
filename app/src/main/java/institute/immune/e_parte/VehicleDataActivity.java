@@ -79,21 +79,28 @@ public class VehicleDataActivity extends AppCompatActivity {
      */
     public void fillData(int userID){
         ArrayList<Vehicle> vehiclesList = op.showVechicles();
-        int posVehicle = op.getIDByUserID(userID);
-        Vehicle userVehicle = vehiclesList.get(posVehicle);
-        name.setText(userVehicle.getName());
-        surname.setText(userVehicle.getSurname());
-        licensePlate.setText(userVehicle.getLicensePlate());
-        address.setText(userVehicle.getAddress());
-        postcode.setText(String.valueOf(userVehicle.getPostcode()));
-        model.setText(userVehicle.getModel());
-        country.setText(userVehicle.getCountry());
-        policyNumber.setText(String.valueOf(userVehicle.getPolicyNumber()));
-        insuranceCompany.setText(userVehicle.getInsuranceCompany());
-        agency.setText(userVehicle.getAgency());
-        gcn.setText(String.valueOf(userVehicle.getGcn()));
-        gccfrom.setText(userVehicle.getGccfrom());
-        gccto.setText(userVehicle.getGccto());
+        //Aqui hay que saber cual es la posiscion en la lista donde userID = userID
+        for (Vehicle userVehicle:vehiclesList){
+            if (userVehicle.getUserID() == userID){
+                name.setText(userVehicle.getName());
+                surname.setText(userVehicle.getSurname());
+                licensePlate.setText(userVehicle.getLicensePlate());
+                address.setText(userVehicle.getAddress());
+                postcode.setText(String.valueOf(userVehicle.getPostcode()));
+                model.setText(userVehicle.getModel());
+                country.setText(userVehicle.getCountry());
+                policyNumber.setText(String.valueOf(userVehicle.getPolicyNumber()));
+                insuranceCompany.setText(userVehicle.getInsuranceCompany());
+                agency.setText(userVehicle.getAgency());
+                gcn.setText(String.valueOf(userVehicle.getGcn()));
+                gccfrom.setText(userVehicle.getGccfrom());
+                gccto.setText(userVehicle.getGccto());
+
+
+            }
+        }
+
+
 
     }
     public void clearFields(){
