@@ -15,8 +15,8 @@ import android.widget.Toast;
 public class NewVehicleActivity extends AppCompatActivity {
     private EditText name, surname, licensePlate, address, postcode, model, country, policyNumber, insuranceCompany, agency, gcn, gccfrom, gccto, userID;
     private MyOpenHelper db;
-    private Intent intent;
     private Button button;
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +34,11 @@ public class NewVehicleActivity extends AppCompatActivity {
         if(isEmpty(name)||isEmpty(surname)||isEmpty(licensePlate)||isEmpty(address)||isEmpty(postcode)||isEmpty(model)||isEmpty(country)||isEmpty(policyNumber)||isEmpty(insuranceCompany)||isEmpty(agency)||isEmpty(gcn)||isEmpty(gccfrom)||isEmpty(gccto)){
             toast(getString(R.string.fieldsEmpty));
         }else {
-            //sendData();
-            db.añadirCoche(name.getText().toString(), surname.getText().toString(), licensePlate.getText().toString() , address.getText().toString(), Integer.parseInt(postcode.getText().toString()), model.getText().toString(), country.getText().toString(), Integer.parseInt(policyNumber.getText().toString()),insuranceCompany.getText().toString(), agency.getText().toString(),Integer.parseInt(gcn.getText().toString()), gccfrom.getText().toString(), gccto.getText().toString(), 1);
+            int userID = db.getUserID(getIntent().getStringExtra("user"));
+            db.añadirCoche(name.getText().toString(), surname.getText().toString(), licensePlate.getText().toString() , address.getText().toString(), Integer.parseInt(postcode.getText().toString()), model.getText().toString(), country.getText().toString(), Integer.parseInt(policyNumber.getText().toString()),insuranceCompany.getText().toString(), agency.getText().toString(),Integer.parseInt(gcn.getText().toString()), gccfrom.getText().toString(), gccto.getText().toString(), userID);
             toast(getString(R.string.registerV));
             button.setEnabled(false);
             finish();
-            intent = new Intent(this,MenuActivity.class);
-            startActivity(intent);
         }
     }
 

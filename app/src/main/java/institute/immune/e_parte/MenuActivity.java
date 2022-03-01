@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.TextView;
 
@@ -42,7 +43,7 @@ public class MenuActivity extends AppCompatActivity {
                 break;
             case R.id.buttonCar:
                 intent = new Intent(this, NewVehicleActivity.class);
-
+                intent.putExtra("user", txtUser.getText());
                 break;
                 /*
             case R.id.imageViewLogOutM:

@@ -17,7 +17,7 @@ public class VehicleDataActivity extends AppCompatActivity {
 
     private Intent intent;
     private MyOpenHelper op;
-    private EditText mail, name, surname, licensePlate, address, postcode, model, country, policyNumber, insuranceCompany, agency, gcn, gccfrom, gccto;
+    private EditText name, surname, licensePlate, address, postcode, model, country, policyNumber, insuranceCompany, agency, gcn, gccfrom, gccto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,6 @@ public class VehicleDataActivity extends AppCompatActivity {
      *
      */
     public void onClickRV(View view) {
-
         intent = new Intent(this, ReportActivity.class);
         startActivity(intent);
 }
@@ -95,13 +94,8 @@ public class VehicleDataActivity extends AppCompatActivity {
                 gcn.setText(String.valueOf(userVehicle.getGcn()));
                 gccfrom.setText(userVehicle.getGccfrom());
                 gccto.setText(userVehicle.getGccto());
-
-
             }
         }
-
-
-
     }
     public void clearFields(){
         name.setText("");
