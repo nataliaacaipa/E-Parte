@@ -38,4 +38,6 @@ El primer paso es dejar claro los datos básicos del siniestro, esto es: fecha, 
     <string name="tvAsegurado">Asegurado(veáse póliza de seguro)</string>
     <string name="path"><![CDATA[Files > Android SDK built for x86 > Android > data > institute.immune.e_parte > files > Documents]]></string>
     <string name="txtTitlePath">Parte guardado en:</string>
+    <string name="bDownloadReport">Obtener parte y volver al menú</string>
+    <string name="bSend">Enviar</string>
 </resources>

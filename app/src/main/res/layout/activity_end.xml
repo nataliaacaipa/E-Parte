@@ -14,7 +14,7 @@
         android:layout_marginTop="420dp"
         android:layout_marginEnd="50dp"
         android:onClick="openMenu"
-        android:text="Obtener parte y volver al menú"
+        android:text="@string/bDownloadReport"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -66,7 +66,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="100dp"
-        android:text="Enviar"
+        android:text="@string/bSend"
         android:onClick="sendReport"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
